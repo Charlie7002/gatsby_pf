@@ -8618,7 +8618,15 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.9.0.tgz"
   "version" "0.9.0"
 
-"react@^16.0.0", "react@^16.14.0":
+"react-tsparticles@^1.34.0":
+  "integrity" "sha512-KG/9H8SIrL0e7S+pYz+cL36lLJzK3IWPLuIaDZdAOQK5321mtLp/tqmu+tnWXgaE1SQorV6Eh8V36Md8UI2E7A=="
+  "resolved" "https://registry.npmjs.org/react-tsparticles/-/react-tsparticles-1.34.0.tgz"
+  "version" "1.34.0"
+  dependencies:
+    "fast-deep-equal" "^3.1.3"
+    "tsparticles" "^1.34.0"
+
+"react@^16.0.0", "react@^16.14.0", "react@>=16":
   "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
   "version" "16.14.0"
@@ -10227,7 +10235,7 @@
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-2.2.0.tgz"
   "version" "2.2.0"
 
-"tsparticles@^1.30.0":
+"tsparticles@^1.30.0", "tsparticles@^1.34.0":
   "integrity" "sha512-7EIyI0339EZEzoUggqKBxkUDCvsM/YT89GyrPTSVcrHNd47SZ9bzTZFAWuTbhQrEiyJEL/np61t2BGOhJJK1Mg=="
   "resolved" "https://registry.npmjs.org/tsparticles/-/tsparticles-1.34.0.tgz"
   "version" "1.34.0"
