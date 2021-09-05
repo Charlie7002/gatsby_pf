@@ -9,7 +9,7 @@ const Hero = () => {
     <HeroContainer>
       <StaticImage
         className="hero-img"
-        src="../assets/images/pf4.png"
+        src="../assets/images/pfhero.png"
         alt="home"
         quality="100"
         style={{ zIndex: 5 }}
@@ -17,7 +17,16 @@ const Hero = () => {
         formats={["auto", "webp", "avif"]}
       />
       <div className="hero-text">
-        <h1>Yo les putes</h1>
+        <h1>
+          Hello,<br></br>je suis <span>Charlotte Cachet</span>
+        </h1>
+        <p>Concéptrice de site web</p>
+        <div className="hero-btn">
+          <Button as="a" href="#">
+            contact
+          </Button>
+          <div className="hero-btn-links"></div>
+        </div>
       </div>
     </HeroContainer>
   )
@@ -35,7 +44,38 @@ const HeroContainer = styled.section`
     position: relative;
     place-items: center;
     display: grid;
+    grid-template-columns: 10% 40% 60%;
+    grid-template-rows: 1fr auto auto auto 1fr;
+    h1 {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      margin: 0;
+      justify-self: start;
+    }
+    p {
+      grid-column: 2/3;
+      grid-row: 3/4;
+      justify-self: start;
+      height: 5rem;
+    }
+    .hero-btn {
+      grid-column: 2/3;
+      grid-row: 4/5;
+      justify-self: start;
+      height: 5rem;
+    }
   }
+`
+
+const Button = styled.button`
+  color: #fff;
+  font-size: 1rem;
+
+  padding: 0.8rem 3.6rem;
+  border: none;
+  font-weight: 600;
+  border-radius: var(--borderRadius-btn);
+  background: var(--lg-violet-btn);
 `
 
 export default Hero
