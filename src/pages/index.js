@@ -9,9 +9,11 @@ import styled from "styled-components"
 import SectionIntro from "../components/SectionIntro"
 import SectionProcessus from "../components/SectionProcessus"
 import SectionAbout from "../components/SectionAbout"
+import SectionProject from "../components/SectionProject"
 
 const MainStyles = styled.main`
-  width: 100%;
+  /* width: 100%; */
+  max-width: 73rem;
   margin: 0 auto;
 `
 
@@ -24,6 +26,7 @@ export default function Home() {
         <SectionIntro />
         <SectionProcessus name="processus" />
         <SectionAbout name="A propos" />
+        <SectionProject name="Mes derniers projects" />
         {/* <p style={{ background: "purple" }}>footer</p> */}
       </MainStyles>
     </Layout>
