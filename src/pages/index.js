@@ -1,6 +1,6 @@
 import React from "react"
 // import ParticlesComp from "../components/ParticlesComp"
-import { StaticImage } from "gatsby-plugin-image"
+
 import "../assets/css/main.css"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"

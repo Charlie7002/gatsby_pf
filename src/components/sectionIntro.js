@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import img from "../assets/images/girl-sect1.svg"
-import { StaticImage } from "gatsby-plugin-image"
 
 const SectionIntroStyles = styled.section`
   display: flex;

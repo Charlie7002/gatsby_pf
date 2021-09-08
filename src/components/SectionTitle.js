@@ -13,11 +13,11 @@ const SectionTitle = ({ img, imgDot, name }) => {
       width: 4.3rem;
     }
     h2 {
-      color: ${name == "processus"
+      color: ${name === "processus"
         ? "var(--violet)"
-        : name == "A propos"
+        : name === "A propos"
         ? "var(--orange)"
-        : name == "Mes derniers projects"
+        : name === "Mes derniers projects"
         ? "var(--blue)"
         : "grey"};
       margin: 0;

@@ -1,4 +1,3 @@
-import React from "react"
 import icondecouverte from "../assets/icons/decouverte.svg"
 import iconconception from "../assets/icons/conception.svg"
 import iconlancement from "../assets/icons/lancement.svg"
