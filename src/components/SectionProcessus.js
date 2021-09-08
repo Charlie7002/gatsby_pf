@@ -37,9 +37,9 @@ const SectionProcessus = ({ name }) => {
     <SectionProcessStyles>
       <SectionTitle img={img} imgDot={imgDot} name={name} />
       <div className="boxwrap">
-        {boxProcess.map(proc => {
+        {boxProcess.map((proc, i) => {
           return (
-            <div className="box">
+            <div className="box" key={i}>
               <img src={proc.icon} alt={proc.title} />
               <h4 style={{ color: proc.color }}>{proc.title}</h4>
               <p>{proc.text}</p>

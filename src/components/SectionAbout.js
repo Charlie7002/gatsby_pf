@@ -53,9 +53,9 @@ const SectionAbout = ({ name }) => {
             src="../assets/images/about.jpg"
             alt="about"
             backgroundColor="white"
-            quality="100"
-            height="250"
-            width="250"
+            quality={100}
+            height={250}
+            width={250}
             className="about-img"
             layout="constrained"
           />
