@@ -3,6 +3,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import "../assets/css/main.css"
 import styled from "styled-components"
+import BtnViolet from "./BtnViolet"
 
 const Hero = () => {
   return (
@@ -22,10 +23,7 @@ const Hero = () => {
         </h1>
         <p>Concéptrice de site web</p>
         <div className="hero-btn">
-          <Button as="a" href="#">
-            contact
-          </Button>
-          <div className="hero-btn-links"></div>
+          <BtnViolet link="#" />
         </div>
       </div>
     </HeroContainer>
@@ -65,17 +63,6 @@ const HeroContainer = styled.section`
       height: 5rem;
     }
   }
-`
-
-const Button = styled.button`
-  color: #fff;
-  font-size: 1rem;
-
-  padding: 0.8rem 3.6rem;
-  border: none;
-  font-weight: 600;
-  border-radius: var(--borderRadius-btn);
-  background: var(--lg-violet-btn);
 `
 
 export default Hero

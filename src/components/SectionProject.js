@@ -5,12 +5,15 @@ import img from "../assets/icons/project.svg"
 import imgDot from "../assets/images/blue_dot.svg"
 import svg from "../assets/images/project-girl.svg"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import BtnViolet from "./BtnViolet"
 
 console.clear()
 
 const SectionProjectStyles = styled.section`
   width: 100%;
+  // avirerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+  margin-bottom: 100px;
   .projectWrap {
     display: flex;
     width: 100%;
@@ -19,11 +22,28 @@ const SectionProjectStyles = styled.section`
   .project {
     height: 34.75rem;
     width: 30.75rem;
-    background: pink;
+    box-shadow: var(--shadow-orangeblur);
     position: relative;
+    border-radius: 1.1rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    .technos {
+      display: flex;
+      width: 80%;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-self: center;
+    }
+    .techno {
+      color: var(--violet);
+      height: 1.95rem;
+      padding: 0 1rem;
+      background: #e7e7ff;
+      border-radius: 0.2rem;
+    }
   }
   .project:first-child {
-    color: purple;
     &:before {
       content: "";
       position: absolute;
@@ -35,9 +55,35 @@ const SectionProjectStyles = styled.section`
       z-index: 34;
     }
   }
-  .img {
-    height: 250px;
-    width: 250px;
+  .imgproject {
+    border-radius: 1.1rem 1.1rem 0 0;
+  }
+  h5 {
+    color: var(--grey-title);
+    text-transform: uppercase;
+    text-align: center;
+    align-self: center;
+  }
+  .wrap-text {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: 75px 70px 50px;
+    height: 100%;
+  }
+  .link-project {
+    width: 15.8rem;
+    height: 2.9rem;
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--orange);
+    background: var(--orange-light2);
+    border: 1px solid var(--orange);
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
   }
 `
 
@@ -46,16 +92,20 @@ const SectionProject = ({ name }) => {
     allContentfulProject: { nodes: projets },
   } = useStaticQuery(graphql`
     {
-      allContentfulProject {
+      allContentfulProject(filter: { featured: { eq: true } }) {
         nodes {
           id
           title
+          techno {
+            techno
+          }
           img {
             gatsbyImageData(
+              height: 298
               layout: CONSTRAINED
               placeholder: TRACED_SVG
-              width: 300
-              height: 200
+              quality: 100
+              width: 490
             )
           }
         }
@@ -68,21 +118,35 @@ const SectionProject = ({ name }) => {
       <SectionTitle name={name} img={img} imgDot={imgDot} />
       <div className="projectWrap">
         {projets.map(p => {
-          console.log(p)
-          const { title, id, img } = p
+          const { title, id, img, techno } = p
           const pathToImage = getImage(img)
-          console.log(pathToImage)
+
+          //recup les technos
+          const tec = []
+          Object.values(techno).forEach(tarray =>
+            tarray.forEach(t => tec.push(t))
+          )
+
           return (
             <article className="project" key={id}>
-              <div className="img">
-                <GatsbyImage image={pathToImage} alt={title} />
+              <div className="imgbox">
+                <GatsbyImage
+                  className="imgproject"
+                  image={pathToImage}
+                  alt={title}
+                />
               </div>
-              <h5>{title}</h5>
-              {/* <div className="technos">
-                {p.techno.forEach(el => {
-                  return <p>{el}</p>
-                })}
-              </div> */}
+              <div className="wrap-text">
+                <h5>{title}</h5>
+                <div className="technos">
+                  {tec.map(tag => (
+                    <span className="techno">{tag}</span>
+                  ))}
+                </div>
+                <Link className="link-project" to="/">
+                  Voir le project
+                </Link>
+              </div>
             </article>
           )
         })}

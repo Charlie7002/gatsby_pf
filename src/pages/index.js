@@ -10,6 +10,7 @@ import SectionIntro from "../components/SectionIntro"
 import SectionProcessus from "../components/SectionProcessus"
 import SectionAbout from "../components/SectionAbout"
 import SectionProject from "../components/SectionProject"
+import SectionContact from "../components/SectionContact"
 
 const MainStyles = styled.main`
   /* width: 100%; */
@@ -27,6 +28,7 @@ export default function Home() {
         <SectionProcessus name="processus" />
         <SectionAbout name="A propos" />
         <SectionProject name="Mes derniers projects" />
+        <SectionContact name="Contact" />
         {/* <p style={{ background: "purple" }}>footer</p> */}
       </MainStyles>
     </Layout>

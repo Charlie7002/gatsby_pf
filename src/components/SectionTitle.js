@@ -17,7 +17,7 @@ const SectionTitle = ({ img, imgDot, name }) => {
         ? "var(--violet)"
         : name === "A propos"
         ? "var(--orange)"
-        : name === "Mes derniers projects"
+        : name === "Mes derniers projects" || name === "Contact"
         ? "var(--blue)"
         : "grey"};
       margin: 0;
