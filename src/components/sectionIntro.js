@@ -7,12 +7,16 @@ const SectionIntroStyles = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // -------------------------------a virer
-  margin-bottom: 100px;
+  h2,
+  h5,
+  h4 {
+    text-align: center;
+    margin-bottom: 3.8rem;
+  }
   span {
     color: var(--violet);
   }
-  border: 1px solid pink;
+
   .set1-img {
     height: 26rem;
   }
@@ -83,21 +87,22 @@ const SectionIntroStyles = styled.section`
 const SectionIntro = () => {
   return (
     <SectionIntroStyles>
-      <h4>
+      <h2>
         Vous n'avez pas besoin d'un site Web, vous avez besoin d'un site Web
         <span> performant </span>.
-      </h4>
-      <p>
+      </h2>
+      <h5>
         Ce mot suplémentaire fait toute la différence entre une
         <span> visite</span> et une
         <span> vente</span>
-      </p>
+      </h5>
       <div className="sep"></div>
-      <p>
+      <h4>
         Quand je dis site Web performant, je ne parle pas seulement d'un beau
         site Web, bien que cela en fasse biensûr partie, voici les
         <span> points clés</span> :
-      </p>
+      </h4>
+
       <div className="pointbox">
         <img className="set1-img" src={img} alt="home" style={{ zIndex: 5 }} />
         <div className="pointbox-tiret">

@@ -8,28 +8,34 @@ const SectionTitle = ({ img, imgDot, name }) => {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: 4rem;
+    height: 3rem;
+    margin-bottom: 7rem;
     img {
-      width: 4.3rem;
+      max-width: 4.3rem;
     }
     h2 {
-      color: ${name === "processus"
+      color: ${name === "processus" || name === "Contact"
         ? "var(--violet)"
         : name === "A propos"
         ? "var(--orange)"
-        : name === "Mes derniers projects" || name === "Contact"
+        : name === "Mes derniers projects"
         ? "var(--blue)"
         : "grey"};
       margin: 0;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 0.9rem;
+
+      transform: scaleY(90%);
     }
   `
   return (
     <TitleStyles>
       <img src={img} alt="processus" />
       <h2>{name} </h2>
-      <div className="dot">
-        <img src={imgDot} alt="" />
-      </div>
+
+      <img src={imgDot} className="dot" alt="" />
     </TitleStyles>
   )
 }

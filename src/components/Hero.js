@@ -23,7 +23,7 @@ const Hero = () => {
         </h1>
         <p>Concéptrice de site web</p>
         <div className="hero-btn">
-          <BtnViolet link="#" />
+          <BtnViolet link="#contact" />
         </div>
       </div>
     </HeroContainer>

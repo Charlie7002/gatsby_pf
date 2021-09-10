@@ -12,8 +12,7 @@ console.clear()
 
 const SectionProjectStyles = styled.section`
   width: 100%;
-  // avirerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-  margin-bottom: 100px;
+
   .projectWrap {
     display: flex;
     width: 100%;

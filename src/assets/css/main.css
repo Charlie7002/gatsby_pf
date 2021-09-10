@@ -1,6 +1,7 @@
 /* utiliser une pluggin pour les fonts a la fin */
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@100;300;400;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;600;700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Raleway:wght@400;600&display=swap");
 
 *,
 ::after,
@@ -14,6 +15,8 @@
   --orange: #ff917d;
   --orange-light: #fbdbcf;
   --orange-light2: #fee7da;
+  --orange-border: #ffbbae;
+  --orange-input: rgba(255, 199, 189, 0.2);
   --violet: #7a7ef1;
   --blue: #799ffc;
   --white: #ffffff;
@@ -22,13 +25,14 @@
   /* grey */
   --grey-m: #c6bac0;
   --grey-d: #505050;
+  --grey-font: #6c6c6c;
   --grey-title: #454545;
   --grey-blue: #d7dcf2;
 
   /* gradient */
 
   --lg-violet-btn: linear-gradient(40deg, #7a7ef1 0%, #d181bc 100%);
-  --lg-orange-btn: #fea08f @0% #ffaa86 @50.52% #ffb47d @100%;
+  --lg-orange-btn: linear-gradient(#fea08f 0%, #ffaa86 50.52%, #ffb47d 100%);
 
   /* rest a travailler*/
 
@@ -45,34 +49,26 @@
   --shadow-violet: 0px, 25px rgba(122, 126, 241, 0.3);
   /* typography */
   --defaultFontSize: 87.5%;
-  --headingFont: "Poppins", monospace;
-  --bodyFont: "Poppins", sans-serif;
-  --smallText: 0.8em;
-  --extraSmallText: 0.7em;
   /* rest */
   --backgroundColor: var(var(--grey-700));
-  --textColor: var(--grey-d);
+  --textColor: var(--grey-font);
   --borderRadius-btn: 0.625rem;
-
-  --letterSpacing: 0;
   --transition: 0.3s ease-in-out all;
   --max-width: 1120px;
-  --fixed-width: 600px;
 
   /* font-family */
-  --main-font: "poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --title-font: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --main-font: "Poppins", sans-serif, Roboto;
+  --title-font: "Montserrat", Roboto, sans-serif;
 }
 html {
   font-size: var(--defaultFontSize);
+  font-family: var(--main-font);
 }
 
 body {
   background: var(--backgroundColor);
   color: var(--textColor);
-  font-family: var(--main-font);
+  scroll-behavior: smooth;
   font-weight: 400;
   line-height: 1.75;
 }
@@ -121,6 +117,10 @@ ul {
 a {
   text-decoration: none;
 }
+
+section {
+  margin-bottom: 12rem;
+}
 .img {
   width: 100%;
   display: block;
@@ -128,11 +128,26 @@ a {
 }
 
 .sep {
-  height: 0.15rem;
-  width: 7rem;
+  height: 0.06rem;
+  width: 8rem;
   text-align: center;
   margin: 0 auto;
   background: var(--violet);
+  margin-bottom: 3.8rem;
+}
+
+.btn_def {
+  color: #fff;
+  font-size: 1rem;
+  width: 19.3rem;
+  height: 5rem;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.57rem;
+  text-transform: capitalize;
 }
 
 #tsparticles {

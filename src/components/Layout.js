@@ -1,5 +1,5 @@
 import React from "react"
-import "modern-normalize"
+import "normalize.css"
 import "../assets/css/main.css"
 import Navbar from "./Navbar"
 
