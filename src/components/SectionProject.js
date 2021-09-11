@@ -6,17 +6,19 @@ import imgDot from "../assets/images/blue_dot.svg"
 import svg from "../assets/images/project-girl.svg"
 import styled from "styled-components"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import BtnViolet from "./BtnViolet"
-
-console.clear()
 
 const SectionProjectStyles = styled.section`
   width: 100%;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
   .projectWrap {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    gap: 1rem;
   }
   .project {
     height: 34.75rem;
@@ -84,6 +86,10 @@ const SectionProjectStyles = styled.section`
     align-items: center;
     align-self: center;
   }
+  .link_all {
+    border-radius: var(--borderRadius-btn);
+    background: var(--lg-violet-btn);
+  }
 `
 
 const SectionProject = ({ name }) => {
@@ -150,6 +156,10 @@ const SectionProject = ({ name }) => {
           )
         })}
       </div>
+
+      <Link className="btn_def link_all" to="/">
+        En voir plus
+      </Link>
     </SectionProjectStyles>
   )
 }

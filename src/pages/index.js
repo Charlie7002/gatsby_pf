@@ -1,5 +1,5 @@
 import React from "react"
-import ParticlesComp from "../components/ParticlesComp"
+// import ParticlesComp from "../components/ParticlesComp"
 
 import "../assets/css/main.css"
 import Layout from "../components/Layout"
@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <Layout>
       <Hero />
-      <ParticlesComp />
+      {/* <ParticlesComp /> */}
       <MainStyles>
         <SectionIntro />
         <SectionProcessus name="processus" />

@@ -2,72 +2,85 @@ import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
+import { CgMenuRightAlt } from "react-icons/Cg"
 
 const Nav = styled.nav`
-  width: 100%;
+  margin-top: 0.4rem;
+  height: 6rem;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
-
-  display: grid;
-  /* @supports not (grid-template-columns: subgrid) {
-    --rows: repeat(14, 1fr);
+  z-index: 100;
+  width: 100%;
+  padding: 0 3rem;
+  .linksColumn {
+    display: none;
   }
-  grid-template-columns: var(--rows, subgrid); */
-  grid-template-columns: repeat(14, 1fr);
-  grid-template-rows: 5rem;
-  top: 0;
-  z-index: 10;
-  grid-column: 1/-1;
-  grid-template-rows: 1/2;
-  background: #7fffd447;
-  color: #fff;
-
-  .logo {
+  .linksinline {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 7.5rem;
-  }
-
-  .home {
-    grid-column: 7/8;
-  }
-  .about {
-    grid-column: 9/10;
-  }
-  .release {
-    grid-column: 11/12;
-  }
-  .contact {
-    grid-column: 13/14;
+    width: 48%;
+    justify-content: space-between;
+    margin-right: 4.8rem;
+    font-size: 1.1rem;
   }
   .nav-link {
-    justify-self: center;
-    color: white;
+    color: var(--white);
+    opacity: 0.7;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 1px;
+      background: white;
+      opacity: 0.7;
+      transition: 0.3s all;
+    }
+  }
+  .nav-link:hover {
+    opacity: 1;
+    &:after {
+      width: 50%;
+      opacity: 1;
+    }
   }
 `
 
 const Navbar = () => {
   return (
     <Nav>
-      <div className="logo nav-link">
-        <StaticImage src="../assets/icons/logo.svg" alt="logo"></StaticImage>
+      <StaticImage
+        className="logo"
+        src="../assets/icons/logo.svg"
+        alt="logo"
+      ></StaticImage>
+      <div className="linksColumn">
+        <button type="button">
+          <CgMenuRightAlt className="menu" />
+        </button>
       </div>
+      <div className="linksinline">
+        <Link className="home nav-link" to="">
+          Accueil
+        </Link>
 
-      <Link className="home nav-link" Link to="">
-        Accueil
-      </Link>
+        <Link className="about nav-link" to="">
+          A propos
+        </Link>
 
-      <Link className="about nav-link" Link to="">
-        A propos
-      </Link>
+        <Link className="release nav-link" to="">
+          Réalisations
+        </Link>
 
-      <Link className="release nav-link" to="">
-        Réalisations
-      </Link>
-
-      <Link className="contact nav-link" to="">
-        Contact
-      </Link>
+        <Link className="contact nav-link" to="">
+          Contact
+        </Link>
+      </div>
     </Nav>
   )
 }
