@@ -11,7 +11,7 @@ const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  position: absolute;
   z-index: 100;
   width: 100%;
   padding: 0 3rem;

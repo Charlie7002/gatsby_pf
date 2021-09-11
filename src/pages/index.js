@@ -13,6 +13,10 @@ import SectionProject from "../components/SectionProject"
 import SectionContact from "../components/SectionContact"
 import Footer from "../components/Footer"
 
+import Arrow from "../components/Arrow"
+
+import ScrollToTop from "react-scroll-to-top"
+
 const MainStyles = styled.main`
   max-width: 73rem;
   margin: 0 auto;
@@ -21,6 +25,16 @@ const MainStyles = styled.main`
 export default function Home() {
   return (
     <Layout>
+      <ScrollToTop
+        smooth
+        component={<Arrow />}
+        style={{
+          borderRadius: "40px",
+          boxShadow: "0px 9px 25px  rgba(255, 158, 152, 0.8)",
+          backgroundColor: "#ffbbae",
+          transition: "all, .3s",
+        }}
+      />
       <Hero />
       {/* <ParticlesComp /> */}
       <MainStyles>

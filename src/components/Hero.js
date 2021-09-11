@@ -32,6 +32,7 @@ const Hero = () => {
 
 const HeroContainer = styled.section`
   //tips site gatsby pour placer text par dessus
+  margin-bottom: 6rem;
   display: grid;
   .hero-img {
     grid-area: 1/1;
@@ -48,7 +49,6 @@ const HeroContainer = styled.section`
       grid-column: 2 / span 2;
       grid-row: 2/3;
       font-size: 3.5rem;
-
       justify-self: start;
     }
     h1 {
