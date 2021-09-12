@@ -3,6 +3,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import "../assets/css/main.css"
 import styled from "styled-components"
+import { AiFillGithub } from "react-icons/Ai"
 
 const Hero = () => {
   return (

@@ -1,87 +1,124 @@
 import { Link } from "gatsby"
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import { CgMenuRightAlt } from "react-icons/Cg"
+import NavbarLinks from "./NavbarLinks"
 
-const Nav = styled.nav`
-  margin-top: 0.4rem;
-  height: 6rem;
-  background: rgba(255, 255, 255, 0.2);
+const Navigation = styled.nav`
+  height: 7vh;
   display: flex;
-  align-items: center;
+  position: fixed;
   justify-content: space-between;
-  position: absolute;
-  z-index: 100;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 2vw;
+  z-index: 55;
   width: 100%;
-  padding: 0 3rem;
-  .linksColumn {
-    display: none;
+  align-self: center;
+  @media (max-width: 768px) {
+    position: absolute;
+    height: 6vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
   }
-  .linksinline {
+`
+const Toggle = styled.div`
+  display: none;
+  height: 100%;
+  cursor: pointer;
+  padding: 0 10vw;
+  @media (max-width: 768px) {
     display: flex;
-    width: 48%;
-    justify-content: space-between;
-    margin-right: 4.8rem;
-    font-size: 1.1rem;
   }
-  .nav-link {
-    color: var(--white);
-    opacity: 0.7;
-    position: relative;
-    &:after {
-      content: "";
-      position: absolute;
-      width: 0%;
-      bottom: 0;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: 1px;
-      background: white;
-      opacity: 0.7;
-      transition: 0.3s all;
-    }
+`
+
+const Navbox = styled.div`
+  display: flex;
+  height: 50%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  padding-right: 2rem;
+  width: 55%;
+  a {
+    color: ${props => (props.open ? "#FFFFFF" : "#ff917d")};
   }
-  .nav-link:hover {
-    opacity: 1;
-    &:after {
-      width: 50%;
-      opacity: 1;
-    }
+
+  @media (max-width: 768px) {
+    padding-top: 2rem;
+    background-color: var(--orange-light);
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    justify-content: flex-start;
+    transition: all 0.3s ease-in;
+    top: 0;
+    left: ${props => (props.open ? "-100%" : "0")};
+  }
+`
+
+const Hamburger = styled.div`
+  background-color: ${props => (props.open ? "#ff917d" : "#fff")};
+  width: 30px;
+  height: 3px;
+  transition: all 0.3s linear;
+  align-self: center;
+  z-index: 100;
+  border-radius: 5rem;
+  position: relative;
+  transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
+  ::before,
+  ::after {
+    width: 30px;
+    height: 3px;
+    background-color: ${props => (props.open ? "#ff917d" : "#fff")};
+    content: "";
+    position: absolute;
+    transition: all 0.3s linear;
+    border-radius: 5rem;
+  }
+  ::before {
+    transform: ${props =>
+      props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
+    top: -10px;
+    border-radius: 5rem;
+  }
+  ::after {
+    opacity: ${props => (props.open ? "0" : "1")};
+    transform: ${props => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
+    top: 10px;
+    border-radius: 5rem;
   }
 `
 
 const Navbar = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false)
   return (
-    <Nav>
+    <Navigation>
       <StaticImage
         className="logo"
         src="../assets/icons/logo.svg"
         alt="logo"
       ></StaticImage>
-      <div className="linksColumn">
-        <button type="button">
-          <CgMenuRightAlt className="menu" />
-        </button>
-      </div>
-      <div className="linksinline">
-        <Link className="home nav-link" to="">
-          Accueil
-        </Link>
-
-        <Link className="about nav-link" to="">
-          A propos
-        </Link>
-
-        <Link className="release nav-link" to="">
-          Réalisations
-        </Link>
-
-        <Link className="contact nav-link" to="">
-          Contact
-        </Link>
-      </div>
-    </Nav>
+      <Toggle
+        navbarOpen={navbarOpen}
+        onClick={() => setNavbarOpen(!navbarOpen)}
+      >
+        {navbarOpen ? <Hamburger open /> : <Hamburger />}
+      </Toggle>
+      {navbarOpen ? (
+        <Navbox>
+          <NavbarLinks navbarOpen={navbarOpen} />
+        </Navbox>
+      ) : (
+        <Navbox open>
+          <NavbarLinks />
+        </Navbox>
+      )}
+    </Navigation>
   )
 }
 
