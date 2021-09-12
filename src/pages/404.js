@@ -2,10 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Layout from "../components/Layout"
 
-const WrapperError = styled.div`
-  background: pink;
-  height: 100vh;
-`
+const WrapperError = styled.div``
 
 const ErrorPage = () => {
   return (

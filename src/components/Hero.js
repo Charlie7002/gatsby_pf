@@ -3,7 +3,8 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import "../assets/css/main.css"
 import styled from "styled-components"
-import { AiFillGithub } from "react-icons/Ai"
+import { AiFillGithub, AiOutlineLinkedin } from "react-icons/Ai"
+import { FiMail } from "react-icons/Fi"
 
 const Hero = () => {
   return (
@@ -26,6 +27,9 @@ const Hero = () => {
         <Button className="hero-btn" as="a" href="#contact">
           Contact
         </Button>
+        <div className="links">
+          <AiFillGithub /> <FiMail /> <AiOutlineLinkedin />
+        </div>
       </div>
     </HeroContainer>
   )
@@ -45,7 +49,7 @@ const HeroContainer = styled.section`
     place-items: center;
     display: grid;
     grid-template-columns: 10% 14% 35% 55%;
-    grid-template-rows: 1fr auto auto auto 6% 1fr;
+    grid-template-rows: 1fr auto auto auto 6% 5% 1fr;
     h2 {
       grid-column: 2 / span 2;
       grid-row: 2/3;
@@ -79,6 +83,17 @@ const HeroContainer = styled.section`
       height: 5rem;
       font-size: 1.2rem;
     }
+
+    .links {
+      grid-column: 2 /3;
+      grid-row: 6/7;
+      color: var(--violet);
+      font-size: 1.7rem;
+      display: flex;
+      justify-self: stretch;
+      justify-content: center;
+      gap: 2rem;
+    }
   }
   @keyframes gradient {
     0% {
@@ -104,7 +119,6 @@ const Button = styled.button`
   align-self: stretch;
   font-size: 1.3rem;
   font-family: var(--title-font);
-
   border-radius: var(--borderRadius-btn);
   background: var(--lg-violet-btn);
 `
