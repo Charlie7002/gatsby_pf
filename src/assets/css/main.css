@@ -46,7 +46,7 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --shadow-orange: 0px, 10px rgba(255, 158, 152, 0.2);
   --shadow-orangeblur: 0px 10px 40px rgba(255, 158, 152, 0.2);
-  --shadow-violet: 0px, 25px rgba(122, 126, 241, 0.3);
+  --shadow-violet: 0px 10px 40px rgba(122, 126, 241, 0.3);
   /* typography */
   --defaultFontSize: 87.5%;
   /* rest */
@@ -54,7 +54,7 @@
   --textColor: var(--grey-font);
   --borderRadius-btn: 0.625rem;
   --transition: 0.3s ease-in-out all;
-  --max-width: 1120px;
+  --max-width: 73rem;
 
   /* font-family */
   --main-font: "Poppins", sans-serif, Roboto;
@@ -119,8 +119,10 @@ a {
 }
 
 section {
-  margin-bottom: 14rem;
+  max-width: var(--max-width);
+  margin: 0 auto 14rem;
 }
+
 .img {
   width: 100%;
   display: block;

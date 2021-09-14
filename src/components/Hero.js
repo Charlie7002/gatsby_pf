@@ -4,7 +4,6 @@ import { StaticImage } from "gatsby-plugin-image"
 import "../assets/css/main.css"
 import styled from "styled-components"
 import { AiFillGithub, AiOutlineLinkedin } from "react-icons/Ai"
-import { FiMail } from "react-icons/Fi"
 
 const Hero = () => {
   return (
@@ -28,16 +27,16 @@ const Hero = () => {
           Contact
         </Button>
         <div className="links">
-          <AiFillGithub /> <FiMail /> <AiOutlineLinkedin />
+          <AiFillGithub /> <AiOutlineLinkedin />
         </div>
       </div>
     </HeroContainer>
   )
 }
 
-const HeroContainer = styled.section`
+const HeroContainer = styled.div`
   //tips site gatsby pour placer text par dessus
-  margin-bottom: 6rem;
+  margin-bottom: 0;
   display: grid;
   .hero-img {
     grid-area: 1/1;
@@ -48,23 +47,26 @@ const HeroContainer = styled.section`
     position: relative;
     place-items: center;
     display: grid;
+    color: var(--violet);
     grid-template-columns: 10% 14% 35% 55%;
-    grid-template-rows: 1fr auto auto auto 6% 5% 1fr;
+    grid-template-rows: 33% 5% 5% 12% 6% 10% 1fr;
     h2 {
       grid-column: 2 / span 2;
       grid-row: 2/3;
-      font-size: 3.5rem;
+      font-size: 2.7rem;
       justify-self: start;
+      margin: 0;
     }
     h1 {
       grid-column: 2 / span 2;
       grid-row: 3/4;
-      margin: 0;
-      font-size: 3.8rem;
+
+      font-size: 2.5rem;
       justify-self: start;
-      margin-bottom: 2rem;
+
       span {
-        background: linear-gradient(
+        font-weight: 600;
+        /* background: linear-gradient(
           to right,
           var(--orange) 0%,
           var(--violet) 100%
@@ -73,7 +75,7 @@ const HeroContainer = styled.section`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: 700;
-        animation: gradient 5s ease infinite;
+        animation: gradient 5s ease infinite; */
       }
     }
     p {
@@ -81,18 +83,32 @@ const HeroContainer = styled.section`
       grid-row: 4/5;
       justify-self: start;
       height: 5rem;
-      font-size: 1.2rem;
+      font-family: var(--title-font);
+      letter-spacing: 0.1rem;
+      font-size: 3.5rem;
+      margin-bottom: 3rem;
+      background: linear-gradient(
+        to right,
+        var(--orange) 0%,
+        var(--violet) 100%
+      );
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+      animation: gradient 5s ease infinite;
     }
 
     .links {
       grid-column: 2 /3;
       grid-row: 6/7;
       color: var(--violet);
-      font-size: 1.7rem;
+      font-size: 1.8rem;
       display: flex;
       justify-self: stretch;
       justify-content: center;
-      gap: 2rem;
+      margin-top: 1rem;
+      gap: 1.5rem;
     }
   }
   @keyframes gradient {
@@ -112,6 +128,7 @@ const Button = styled.button`
   grid-row: 5/6;
   justify-self: start;
   color: var(--white);
+  letter-spacing: 0.1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,5 +138,6 @@ const Button = styled.button`
   font-family: var(--title-font);
   border-radius: var(--borderRadius-btn);
   background: var(--lg-violet-btn);
+  box-shadow: 10px 10px 30px 2px rgba(179, 114, 243, 0.46);
 `
 export default Hero

@@ -6,10 +6,23 @@ import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 const SectionAboutStyles = styled.section`
+  position: relative;
+  .white {
+    position: absolute;
+    z-index: 2;
+    width: 100vw;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    background: #fffaf7;
+    height: 45rem;
+  }
   .about {
     display: grid;
     grid-template-columns: minmax(34.5rem, 20rem) 1fr;
     height: 26rem;
+    position: relative;
+    z-index: 2;
   }
   .about-img {
     border-radius: 100%;
@@ -31,6 +44,7 @@ const SectionAboutStyles = styled.section`
 const SectionAbout = ({ name }) => {
   return (
     <SectionAboutStyles>
+      <div className="white"></div>
       <SectionTitle name={name} img={img} imgDot={imgDot} />
       <div className="about">
         <div className="about-text">

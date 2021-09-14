@@ -20,8 +20,9 @@ const SectionProcessStyles = styled.section`
       background: pink;
       padding: 2.5rem;
       background: var(--white);
+      z-index: 2;
       border-radius: 20px;
-      box-shadow: 0px 10px 40px rgba(122, 126, 241, 0.3);
+      box-shadow: 0px 10px 40px rgba(183, 185, 245, 0.3);
       h4 {
         font-weight: 700;
       }

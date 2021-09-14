@@ -40,7 +40,7 @@ const Navbox = styled.div`
   height: 50%;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   padding-right: 2rem;
   width: 55%;
   a {

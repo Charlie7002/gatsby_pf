@@ -28,6 +28,9 @@ const SectionProjectStyles = styled.section`
     border-radius: 1.1rem;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    z-index: 5;
+    position: relative;
+    background: var(--white);
     .technos {
       display: flex;
       width: 80%;
@@ -89,6 +92,7 @@ const SectionProjectStyles = styled.section`
   .link_all {
     border-radius: var(--borderRadius-btn);
     background: var(--lg-violet-btn);
+    box-shadow: 10px 10px 30px 2px rgba(179, 114, 243, 0.46);
   }
 `
 

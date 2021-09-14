@@ -7,8 +7,10 @@ const SectionTitle = ({ img, imgDot, name }) => {
   const TitleStyles = styled.div`
     display: flex;
     justify-content: center;
+    position: relative;
     align-items: center;
     gap: 4rem;
+    z-index: 5;
     height: 3rem;
     margin-bottom: 7rem;
     img {

@@ -1,5 +1,5 @@
 import React from "react"
-// import ParticlesComp from "../components/ParticlesComp"
+import ParticlesComp from "../components/ParticlesComp"
 
 import "../assets/css/main.css"
 import Layout from "../components/Layout"
@@ -18,8 +18,8 @@ import Arrow from "../components/Arrow"
 import ScrollToTop from "react-scroll-to-top"
 
 const MainStyles = styled.main`
-  max-width: 73rem;
-  margin: 0 auto;
+  /* max-width: 73rem; */
+  /* margin: 0 auto; */
 `
 
 export default function Home() {
@@ -33,10 +33,11 @@ export default function Home() {
           boxShadow: "0px 9px 25px  rgba(255, 158, 152, 0.8)",
           backgroundColor: "#ffbbae",
           transition: "all, .3s",
+          zIndex: 59,
         }}
       />
       <Hero />
-      {/* <ParticlesComp /> */}
+      <ParticlesComp />
       <MainStyles>
         <SectionIntro />
         <SectionProcessus name="processus" />
