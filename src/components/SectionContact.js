@@ -4,6 +4,8 @@ import img from "../assets/icons/contact.svg"
 import imgDot from "../assets/images/violet_dot.svg"
 import styled from "styled-components"
 import img_contact from "../assets/images/img_contact.svg"
+import img_thx from "../assets/images/thx.svg"
+import { useForm, ValidationError } from "@formspree/react"
 
 const SectionContactStyles = styled.section`
   z-index: 5;
@@ -30,9 +32,16 @@ const SectionContactStyles = styled.section`
     input,
     textarea {
       background: var(--orange-input);
-      border: 1px solid var(--orange-border);
+      border: 1px solid var(--orange-light);
       border-radius: 0.3rem;
+      font-size: 1.2rem;
+      color: var(--grey-d);
       resize: none;
+      padding: 1.5rem;
+    }
+    textarea:focus,
+    input:focus {
+      outline: 1px solid var(--orange);
     }
     label {
       font-size: 1.125rem;
@@ -66,6 +75,19 @@ const SectionContactStyles = styled.section`
       font-size: 1.8rem;
     }
   }
+  .form_thanks {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    p {
+      color: var(--violet);
+      font-size: 1.2rem;
+    }
+  }
 `
 
 const SectionContact = ({ name }) => {
@@ -90,19 +112,36 @@ const SectionContact = ({ name }) => {
           </a>
           <p>ou utiliser le formulaire de contact</p>
         </div>
-        <form method="post" action="#">
-          <label htmlFor="nom">Nom / Prénom</label>
-          <input type="text" name="name" id="name" />
-          <label htmlFor="email">Email</label>
-          <input type="email" name="email" id="email" />
-          <label htmlFor="message">Message</label>
-          <textarea name="message" id="message" cols="30" rows="10"></textarea>
-          <button type="submit" className="btn_contact">
-            Envoyer
-          </button>
-        </form>
+        <ContactForm />
       </div>
     </SectionContactStyles>
+  )
+}
+
+const ContactForm = () => {
+  const [state, handleSubmit] = useForm("myyloekb")
+  if (state.succeeded) {
+    return (
+      <div className="form_thanks">
+        <img src={img_thx} alt="message send" />
+        <p>Votre message a bien été envoyé !</p>
+      </div>
+    )
+  }
+  return (
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="nom">Nom / Prénom</label>
+      <input type="text" name="name" id="name" />
+      <label htmlFor="email">Email</label>
+      <input id="email" type="email" name="email" />
+      <ValidationError prefix="Email" field="email" errors={state.errors} />
+      <label htmlFor="message">Message</label>
+      <textarea id="message" name="message" cols="30" rows="10" />
+      <ValidationError prefix="Message" field="message" errors={state.errors} />
+      <button type="submit" className="btn_contact" disabled={state.submitting}>
+        Envoyer
+      </button>
+    </form>
   )
 }
 

@@ -52,7 +52,7 @@ const NavbarLinks = ({ navbarOpen }) => {
       <NavItem activeClassName="active-link" to="/404">
         Services
       </NavItem>
-      <NavItem activeClassName="active-link" to="/404">
+      <NavItem activeClassName="active-link" to="/realisations">
         Réalisations
       </NavItem>
       {/* <NavItem activeClassName="active-link" to="/404">
