@@ -6,11 +6,16 @@ import styled from "styled-components"
 import img_contact from "../assets/images/img_contact.svg"
 
 const SectionContactStyles = styled.section`
+  z-index: 5;
+  background: var(--white);
+  position: relative;
+  padding-top: 2rem;
   .wrap {
     display: grid;
     color: var(--grey-font);
-    grid-template-columns: 30% 40%;
+    grid-template-columns: 40% 50%;
     justify-content: center;
+    gap: 5rem;
     form {
       display: flex;
       flex-direction: column;
@@ -46,6 +51,21 @@ const SectionContactStyles = styled.section`
     margin-top: 4rem;
     box-shadow: 0 16px 40px 0 rgba(255, 84, 117, 0.46);
   }
+  .img-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+    p {
+      text-align: center;
+      font-size: 1.4rem;
+    }
+    span {
+      color: var(--orange);
+      font-size: 1.8rem;
+    }
+  }
 `
 
 const SectionContact = ({ name }) => {
@@ -56,7 +76,8 @@ const SectionContact = ({ name }) => {
         <div className="img-section">
           <img src={img_contact} alt="contact" />
           <p>
-            Si vous avez une question, besoin de renseignements, n'hésitez pas!
+            Si vous avez une question, besoin de renseignements ou un projet en
+            tête, n'hésitez pas!
           </p>
           <span>hello@charlotte-cachet.com</span>
         </div>

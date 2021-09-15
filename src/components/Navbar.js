@@ -40,9 +40,9 @@ const Navbox = styled.div`
   height: 50%;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.2rem;
-  padding-right: 2rem;
-  width: 55%;
+  font-size: 1.1rem;
+  padding-right: 4rem;
+  width: 35%;
   a {
     color: ${props => (props.open ? "#FFFFFF" : "#ff917d")};
   }

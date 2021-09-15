@@ -55,9 +55,9 @@ const NavbarLinks = ({ navbarOpen }) => {
       <NavItem activeClassName="active-link" to="/404">
         Réalisations
       </NavItem>
-      <NavItem activeClassName="active-link" to="/404">
+      {/* <NavItem activeClassName="active-link" to="/404">
         Contact
-      </NavItem>
+      </NavItem> */}
     </>
   )
 }
