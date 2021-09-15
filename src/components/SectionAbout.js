@@ -45,7 +45,7 @@ const SectionAbout = ({ name }) => {
   return (
     <SectionAboutStyles>
       <div className="white"></div>
-      <SectionTitle name={name} img={img} imgDot={imgDot} />
+      <SectionTitle name={name} img={img} imgDot={imgDot} id="about" />
       <div className="about">
         <div className="about-text">
           <p>

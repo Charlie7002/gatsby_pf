@@ -73,6 +73,14 @@ body {
   line-height: 1.75;
 }
 
+input:focus {
+  outline: none;
+}
+
+textarea:focus {
+  outline: none;
+}
+
 p {
   margin: 0;
 }

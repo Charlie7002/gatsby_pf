@@ -93,6 +93,8 @@ const SectionProjectStyles = styled.section`
     border-radius: var(--borderRadius-btn);
     background: var(--lg-violet-btn);
     box-shadow: 10px 10px 30px 2px rgba(179, 114, 243, 0.46);
+    z-index: 5;
+    position: relative;
   }
 `
 
@@ -124,7 +126,7 @@ const SectionProject = ({ name }) => {
 
   return (
     <SectionProjectStyles>
-      <SectionTitle name={name} img={img} imgDot={imgDot} />
+      <SectionTitle name={name} img={img} imgDot={imgDot} id="project" />
       <div className="projectWrap">
         {projets.map(p => {
           const { title, id, img, techno } = p
@@ -163,7 +165,7 @@ const SectionProject = ({ name }) => {
         })}
       </div>
 
-      <Link className="btn_def link_all" to="/">
+      <Link className="btn_def link_all" to="/realisations">
         En voir plus
       </Link>
     </SectionProjectStyles>
