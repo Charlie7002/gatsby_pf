@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-const violet = "var(--violet)"
-
 const SectionTitle = ({ img, imgDot, name }) => {
   const TitleStyles = styled.div`
     display: flex;

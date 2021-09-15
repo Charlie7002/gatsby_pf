@@ -27,7 +27,12 @@ const Hero = () => {
           Contact
         </Button>
         <div className="links">
-          <AiFillGithub /> <AiOutlineLinkedin />
+          <a href="https://www.linkedin.com/in/charlotte-cachet-devweb">
+            <AiOutlineLinkedin />
+          </a>
+          <a href="https://github.com/Charlie7002">
+            <AiFillGithub />
+          </a>
         </div>
       </div>
     </HeroContainer>
@@ -48,7 +53,7 @@ const HeroContainer = styled.div`
     place-items: center;
     display: grid;
     color: var(--violet);
-    grid-template-columns: 10% 14% 35% 55%;
+    grid-template-columns: 15% 14% 35% 55%;
     grid-template-rows: 33% 5% 5% 12% 6% 10% 1fr;
     h2 {
       grid-column: 2 / span 2;
@@ -66,16 +71,6 @@ const HeroContainer = styled.div`
 
       span {
         font-weight: 600;
-        /* background: linear-gradient(
-          to right,
-          var(--orange) 0%,
-          var(--violet) 100%
-        );
-        background-size: 200% 200%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 700;
-        animation: gradient 5s ease infinite; */
       }
     }
     p {
@@ -109,6 +104,13 @@ const HeroContainer = styled.div`
       justify-content: center;
       margin-top: 1rem;
       gap: 1.5rem;
+      a {
+        text-decoration: none;
+        color: var(--violet);
+        &:visited {
+          color: var(--violet);
+        }
+      }
     }
   }
   @keyframes gradient {
@@ -129,12 +131,14 @@ const Button = styled.button`
   justify-self: start;
   color: var(--white);
   letter-spacing: 0.1rem;
+  text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-self: stretch;
   align-self: stretch;
-  font-size: 1.3rem;
+
+  font-size: 1.1rem;
   font-family: var(--title-font);
   border-radius: var(--borderRadius-btn);
   background: var(--lg-violet-btn);

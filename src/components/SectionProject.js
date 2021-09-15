@@ -148,8 +148,10 @@ const SectionProject = ({ name }) => {
               <div className="wrap-text">
                 <h5>{title}</h5>
                 <div className="technos">
-                  {tec.map(tag => (
-                    <span className="techno">{tag}</span>
+                  {tec.map((tag, i) => (
+                    <span key={i} className="techno">
+                      {tag}
+                    </span>
                   ))}
                 </div>
                 <Link className="link-project" to="/">

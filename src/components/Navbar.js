@@ -2,13 +2,13 @@ import { Link } from "gatsby"
 import React, { useState } from "react"
 import styled from "styled-components"
 import { StaticImage } from "gatsby-plugin-image"
-import { CgMenuRightAlt } from "react-icons/Cg"
+
 import NavbarLinks from "./NavbarLinks"
 
 const Navigation = styled.nav`
-  height: 7vh;
+  height: 10vh;
   display: flex;
-  position: fixed;
+  position: absolute;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
@@ -38,11 +38,12 @@ const Toggle = styled.div`
 const Navbox = styled.div`
   display: flex;
   height: 50%;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 1.1rem;
-  padding-right: 4rem;
-  width: 35%;
+  padding-right: 6rem;
+  gap: 2rem;
+  width: 55%;
   a {
     color: ${props => (props.open ? "#FFFFFF" : "#ff917d")};
   }

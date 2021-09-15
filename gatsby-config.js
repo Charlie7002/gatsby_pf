@@ -15,6 +15,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-mailgo`,
     {
       resolve: `gatsby-source-contentful`,
       options: {

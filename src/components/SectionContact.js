@@ -61,7 +61,7 @@ const SectionContactStyles = styled.section`
       text-align: center;
       font-size: 1.4rem;
     }
-    span {
+    a {
       color: var(--orange);
       font-size: 1.8rem;
     }
@@ -79,7 +79,16 @@ const SectionContact = ({ name }) => {
             Si vous avez une question, besoin de renseignements ou un projet en
             tête, n'hésitez pas!
           </p>
-          <span>hello@charlotte-cachet.com</span>
+
+          <a
+            href="#mailgo"
+            data-address="hello"
+            data-domain="charlotte-cachet.com"
+            className="dark"
+          >
+            &rarr; Ecrire un email &larr;
+          </a>
+          <p>ou utiliser le formulaire de contact</p>
         </div>
         <form method="post" action="#">
           <label htmlFor="nom">Nom / Prénom</label>
