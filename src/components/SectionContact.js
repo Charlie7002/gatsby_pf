@@ -78,13 +78,16 @@ const SectionContactStyles = styled.section`
   .form_thanks {
     height: 100%;
     width: 100%;
+    border: 1px solid #f5e6dc;
+    background: #fffaf7;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 3rem;
     p {
-      color: var(--violet);
+      color: var(--orange);
       font-size: 1.2rem;
     }
   }
@@ -131,12 +134,12 @@ const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="nom">Nom / Prénom</label>
-      <input type="text" name="name" id="name" />
+      <input type="text" name="name" id="name" required />
       <label htmlFor="email">Email</label>
-      <input id="email" type="email" name="email" />
+      <input id="email" type="email" name="email" required />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
       <label htmlFor="message">Message</label>
-      <textarea id="message" name="message" cols="30" rows="10" />
+      <textarea id="message" name="message" cols="30" rows="10" required />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
       <button type="submit" className="btn_contact" disabled={state.submitting}>
         Envoyer

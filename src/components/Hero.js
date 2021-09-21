@@ -10,7 +10,7 @@ const Hero = () => {
     <HeroContainer>
       <StaticImage
         className="hero-img"
-        src="../assets/images/pfhero.png"
+        src="../assets/images/pfhero5.png"
         alt="home"
         quality="100"
         style={{ zIndex: 5 }}

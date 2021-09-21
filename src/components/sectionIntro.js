@@ -7,11 +7,14 @@ const SectionIntroStyles = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+
   h2,
   h5,
   h4 {
     text-align: center;
     margin-bottom: 3.8rem;
+    z-index: 2;
   }
   span {
     color: var(--violet);
@@ -25,6 +28,7 @@ const SectionIntroStyles = styled.section`
     justify-content: space-between;
     align-items: center;
     position: relative;
+
     p {
       font-size: 1.55rem;
       color: var(--gray-d);
@@ -82,11 +86,21 @@ const SectionIntroStyles = styled.section`
       gap: 1rem;
     }
   }
+  .bg {
+    background: white;
+    z-index: 1;
+    position: absolute;
+    height: 400px;
+    width: 100vw;
+    opacity: 0.8;
+    top: -1rem;
+  }
 `
 
 const SectionIntro = () => {
   return (
     <SectionIntroStyles>
+      <div className="bg"></div>
       <h2>
         Vous n'avez pas besoin d'un site Web, vous avez besoin d'un site Web
         <span> performant </span>.

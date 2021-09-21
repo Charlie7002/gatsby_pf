@@ -33,7 +33,7 @@ const Footer = () => {
       />
       <div className="text">
         <p>Mentions légales / Données personnelles</p>
-        <p>Developed and designed with love ❤️ by Charlotte Cachet</p>
+        <p>Developed and designed with ☕ by Charlotte Cachet</p>
       </div>
     </SectionFooterStyles>
   )

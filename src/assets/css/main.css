@@ -128,7 +128,11 @@ a {
 
 section {
   max-width: var(--max-width);
-  margin: 0 auto 14rem;
+
+  /* a virer ****************************************************************/
+  border-left: solid red 1px;
+  border-right: solid red 1px;
+  margin: 2rem auto 15rem;
 }
 
 .img {
@@ -144,6 +148,7 @@ section {
   margin: 0 auto;
   background: var(--violet);
   margin-bottom: 3.8rem;
+  z-index: 2;
 }
 
 .btn_def {
