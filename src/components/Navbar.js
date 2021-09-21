@@ -24,6 +24,12 @@ const Navigation = styled.nav`
     right: 0;
     left: 0;
   }
+  .test {
+    width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
 `
 const Toggle = styled.div`
   display: none;
@@ -38,11 +44,10 @@ const Toggle = styled.div`
 const Navbox = styled.div`
   display: flex;
   height: 50%;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   font-size: 1.1rem;
-  padding-right: 6rem;
-  gap: 2rem;
+  gap: 7rem;
   width: 55%;
   a {
     color: ${props => (props.open ? "#FFFFFF" : "#ff917d")};
@@ -99,26 +104,28 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
     <Navigation>
-      <StaticImage
-        className="logo"
-        src="../assets/icons/logo.svg"
-        alt="logo"
-      ></StaticImage>
-      <Toggle
-        navbarOpen={navbarOpen}
-        onClick={() => setNavbarOpen(!navbarOpen)}
-      >
-        {navbarOpen ? <Hamburger open /> : <Hamburger />}
-      </Toggle>
-      {navbarOpen ? (
-        <Navbox>
-          <NavbarLinks navbarOpen={navbarOpen} />
-        </Navbox>
-      ) : (
-        <Navbox open>
-          <NavbarLinks />
-        </Navbox>
-      )}
+      <div className="test">
+        <StaticImage
+          className="logo"
+          src="../assets/icons/logo.svg"
+          alt="logo"
+        ></StaticImage>
+        <Toggle
+          navbarOpen={navbarOpen}
+          onClick={() => setNavbarOpen(!navbarOpen)}
+        >
+          {navbarOpen ? <Hamburger open /> : <Hamburger />}
+        </Toggle>
+        {navbarOpen ? (
+          <Navbox>
+            <NavbarLinks navbarOpen={navbarOpen} />
+          </Navbox>
+        ) : (
+          <Navbox open>
+            <NavbarLinks />
+          </Navbox>
+        )}
+      </div>
     </Navigation>
   )
 }
