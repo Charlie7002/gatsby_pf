@@ -52,18 +52,21 @@ const HeroContainer = styled.div`
     position: relative;
     place-items: center;
     display: grid;
+    width: 73rem;
+    margin: 0 auto;
     color: var(--violet);
-    grid-template-columns: 15% 14% 35% 55%;
-    grid-template-rows: 33% 5% 5% 12% 6% 10% 1fr;
+    grid-template-columns: 19% 35% 55%;
+    grid-template-rows: 30% 10% 10% 15% 6% 10% 1fr;
     h2 {
-      grid-column: 2 / span 2;
+      grid-column: 1 / span 2;
       grid-row: 2/3;
-      font-size: 2.7rem;
+      font-size: 3rem;
       justify-self: start;
+      font-weight: 800;
       margin: 0;
     }
     h1 {
-      grid-column: 2 / span 2;
+      grid-column: 1 / span 2;
       grid-row: 3/4;
 
       font-size: 2.5rem;
@@ -74,7 +77,7 @@ const HeroContainer = styled.div`
       }
     }
     p {
-      grid-column: 2 / span 2;
+      grid-column: 1 / span 2;
       grid-row: 4/5;
       justify-self: start;
       height: 5rem;
@@ -95,7 +98,7 @@ const HeroContainer = styled.div`
     }
 
     .links {
-      grid-column: 2 /3;
+      grid-column: 1 /2;
       grid-row: 6/7;
       color: var(--violet);
       font-size: 1.8rem;
@@ -126,7 +129,7 @@ const HeroContainer = styled.div`
   }
 `
 const Button = styled.button`
-  grid-column: 2/3;
+  grid-column: 1/2;
   grid-row: 5/6;
   justify-self: start;
   color: var(--white);
