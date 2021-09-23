@@ -16,7 +16,7 @@ const SectionContactStyles = styled.section`
     display: grid;
     color: var(--grey-font);
     grid-template-columns: 40% 50%;
-    justify-content: center;
+    justify-content: space-between;
     gap: 5rem;
     form {
       display: flex;
@@ -59,6 +59,14 @@ const SectionContactStyles = styled.section`
     border-radius: 0.5rem;
     margin-top: 4rem;
     box-shadow: 0 16px 40px 0 rgba(255, 84, 117, 0.46);
+    transition: all 0.4s;
+
+    &:hover {
+      filter: hue-rotate(20%);
+      filter: hue-rotate(10deg);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 40px 0 rgba(255, 84, 117, 0.6);
+    }
   }
   .img-section {
     display: flex;

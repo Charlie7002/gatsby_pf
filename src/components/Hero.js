@@ -52,7 +52,7 @@ const HeroContainer = styled.div`
     position: relative;
     place-items: center;
     display: grid;
-    width: 73rem;
+    width: var(--max-width);
     margin: 0 auto;
     color: var(--violet);
     grid-template-columns: 19% 35% 55%;
@@ -140,7 +140,6 @@ const Button = styled.button`
   align-items: center;
   justify-self: stretch;
   align-self: stretch;
-
   font-size: 1.1rem;
   font-family: var(--title-font);
   border-radius: var(--borderRadius-btn);

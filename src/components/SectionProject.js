@@ -8,7 +8,6 @@ import styled from "styled-components"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 const SectionProjectStyles = styled.section`
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,6 +94,13 @@ const SectionProjectStyles = styled.section`
     box-shadow: 10px 10px 30px 2px rgba(179, 114, 243, 0.46);
     z-index: 5;
     position: relative;
+    transition: 0.4s all;
+    &:hover {
+      filter: hue-rotate(20%);
+      filter: hue-rotate(30deg);
+      transform: translateY(-2px);
+      box-shadow: 0px 10px 40px 2px rgba(179, 114, 243, 0.7);
+    }
   }
 `
 

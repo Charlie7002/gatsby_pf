@@ -7,7 +7,7 @@ import styled from "styled-components"
 
 const SectionProcessStyles = styled.section`
   .boxwrap {
-    max-width: 72.5rem;
+    max-width: var(--max-width);
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 420px));
@@ -28,6 +28,9 @@ const SectionProcessStyles = styled.section`
       }
       p {
         font-size: 1.23rem;
+      }
+      img {
+        height: 85px;
       }
     }
   }

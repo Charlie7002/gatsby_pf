@@ -24,8 +24,8 @@ const Navigation = styled.nav`
     right: 0;
     left: 0;
   }
-  .test {
-    width: 75rem;
+  .wrap-nav {
+    width: var(--max-width);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -104,7 +104,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
     <Navigation>
-      <div className="test">
+      <div className="wrap-nav">
         <StaticImage
           className="logo"
           src="../assets/icons/logo.svg"

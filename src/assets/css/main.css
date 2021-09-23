@@ -54,7 +54,7 @@
   --textColor: var(--grey-font);
   --borderRadius-btn: 0.625rem;
   --transition: 0.3s ease-in-out all;
-  --max-width: 73rem;
+  --max-width: 77rem;
 
   /* font-family */
   --main-font: "Poppins", sans-serif, Roboto;
@@ -129,9 +129,6 @@ a {
 section {
   max-width: var(--max-width);
 
-  /* a virer ****************************************************************/
-  border-left: solid red 1px;
-  border-right: solid red 1px;
   margin: 2rem auto 15rem;
 }
 
