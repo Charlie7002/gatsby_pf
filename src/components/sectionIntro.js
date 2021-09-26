@@ -91,7 +91,7 @@ const SectionIntroStyles = styled.section`
     z-index: 1;
     position: absolute;
     height: 400px;
-    width: 100vw;
+    width: 100%;
     opacity: 0.8;
     top: -1rem;
   }

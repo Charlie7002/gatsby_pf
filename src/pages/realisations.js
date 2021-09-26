@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Layout from "../components/Layout"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
+import ProjectsFilter from "../components/ProjectsFilter"
 
 const ProjectsStyles = styled.section`
   .wrap-list {
@@ -76,7 +77,7 @@ const Projects = () => {
       }
     }
   `)
-  console.log(projets)
+
   return (
     <Layout>
       <NavSection>
@@ -84,7 +85,7 @@ const Projects = () => {
       </NavSection>
 
       <ProjectsStyles>
-        <p> Salut les projects de ouf ouaich</p>
+        <ProjectsFilter projets={projets} />
         <div className="wrap-list">
           {projets.map(p => {
             const { title, description, id, link, img, techno } = p

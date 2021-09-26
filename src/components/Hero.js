@@ -43,6 +43,8 @@ const HeroContainer = styled.div`
   //tips site gatsby pour placer text par dessus
   margin-bottom: 0;
   display: grid;
+  /* position: relative;
+  z-index: 1; */
   .hero-img {
     grid-area: 1/1;
   }
