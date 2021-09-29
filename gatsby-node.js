@@ -4,7 +4,7 @@ const slugify = require("slugify")
 // Create blog pages dynamically
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const technoTemplate = path.resolve(`src/templates/techno.js`)
+  const technoTemplate = path.resolve(`src/pages/realisations.js`)
 
   const result = await graphql(`
     query {
@@ -18,13 +18,10 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  console.log(
-    "************************************************************************"
-  )
   result.data.allContentfulProject.nodes.forEach(projet => {
-    console.log(projet)
     projet.techno.techno.forEach(tec => {
       const tecSlug = slugify(tec, { lower: true })
+      //envoi dans context tec
       createPage({
         path: `/${tecSlug}`,
         component: technoTemplate,

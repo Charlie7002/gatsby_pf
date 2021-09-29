@@ -1,9 +1,11 @@
-import { Link } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import slugify from "slugify"
 
 const Filter = styled.div`
+  width: var(--max-width);
+  margin: 2rem auto;
   .tag-list {
     min-height: 60px;
     display: flex;
@@ -12,17 +14,59 @@ const Filter = styled.div`
     justify-content: center;
     align-items: center;
     .link {
-      background: pink;
       padding: 0.2rem 0.5rem;
       text-transform: capitalize;
-      background: var(--orange-light);
       color: var(--orange);
       border-radius: 0.2rem;
+      border: 1px var(--orange) solid;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 0.5rem;
+      .number {
+        background: pink;
+        height: 1.2rem;
+        width: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: white;
+      }
+      &:hover {
+        background: #ffe6e2;
+      }
+    }
+    a {
+      &[aria-current="page"] {
+        background: var(--orange);
+        color: white;
+        .number {
+          background: white;
+          color: var(--orange);
+        }
+      }
     }
   }
 `
 
-const ProjectsFilter = ({ projets }) => {
+const ProjectsFilter = ({ data }) => {
+  const {
+    allContentfulProject: { nodes: projets },
+  } = useStaticQuery(graphql`
+    {
+      allContentfulProject {
+        nodes {
+          id
+          techno {
+            techno
+          }
+        }
+      }
+    }
+  `)
+
   const listTec = {}
   projets.map(p => {
     Object.values(p.techno).forEach(tarray => {
@@ -43,8 +87,8 @@ const ProjectsFilter = ({ projets }) => {
           const slug = slugify(key, { lower: true })
           return (
             <Link className="link" key={i} to={`/${slug}`}>
-              {key}
-              <span> {value}</span>
+              <p>{key}</p>
+              <p className="number"> {value}</p>
             </Link>
           )
         })}
