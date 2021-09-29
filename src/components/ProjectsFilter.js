@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
+import slugify from "slugify"
 
 const Filter = styled.div`
   .tag-list {
@@ -16,7 +17,6 @@ const Filter = styled.div`
       text-transform: capitalize;
       background: var(--orange-light);
       color: var(--orange);
-
       border-radius: 0.2rem;
     }
   }
@@ -39,12 +39,15 @@ const ProjectsFilter = ({ projets }) => {
   return (
     <Filter>
       <div className="tag-list">
-        {Object.entries(listTec).map(([key, value], i) => (
-          <Link className="link" key={i} to={`/${key}`}>
-            {key}
-            <span> {value}</span>
-          </Link>
-        ))}
+        {Object.entries(listTec).map(([key, value], i) => {
+          const slug = slugify(key, { lower: true })
+          return (
+            <Link className="link" key={i} to={`/${slug}`}>
+              {key}
+              <span> {value}</span>
+            </Link>
+          )
+        })}
       </div>
     </Filter>
   )

@@ -1,6 +1,10 @@
 import React from "react"
 import styled from "styled-components"
+import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import slugify from "slugify"
+import Layout from "../components/Layout"
+import ProjectsFilter from "../components/ProjectsFilter"
 
 const ProjectsStyles = styled.section`
   .wrap-list {
@@ -38,26 +42,39 @@ const ProjectsStyles = styled.section`
     padding-left: 2rem;
   }
 `
+const NavSection = styled.div`
+  .top {
+    background: pink;
+    height: 7rem;
+  }
+`
 
-const projectsList = ({ projets }) => {
+const List = ({ data }) => {
+  const projets = data.allContentfulProject.nodes
+  console.log(projets)
   return (
-    <ProjectsStyles>
-      <div className="wrap-list">
-        {projets.map((projet, i) => {
-          return <SingleProjet key={i} {...projet} />
-        })}
-      </div>
-    </ProjectsStyles>
+    <Layout>
+      <NavSection>
+        <div className="top"></div>
+      </NavSection>
+      <ProjectsFilter projets={projets} />
+      <ProjectsStyles>
+        <div className="wrap-list">
+          {projets.map(projet => {
+            console.log(projet)
+            return <SingleProjet {...projet} />
+          })}
+        </div>
+      </ProjectsStyles>
+    </Layout>
   )
 }
 
 const SingleProjet = ({ title, description, id, link, img, techno }) => {
   const pathToImage = getImage(img)
-
   //recup les technos
   const tec = []
   Object.values(techno).forEach(tarray => tarray.forEach(t => tec.push(t)))
-
   return (
     <article key={id}>
       <GatsbyImage className="imgproject" image={pathToImage} alt={title} />
@@ -79,4 +96,22 @@ const SingleProjet = ({ title, description, id, link, img, techno }) => {
   )
 }
 
-export default projectsList
+export const query = graphql`
+  query getProjet($tec: String) {
+    allContentfulProject(filter: { techno: { techno: { eq: $tec } } }) {
+      nodes {
+        techno {
+          techno
+        }
+        id
+        link
+        title
+        img {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+        }
+      }
+    }
+  }
+`
+
+export default List
