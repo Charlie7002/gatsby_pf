@@ -43,7 +43,7 @@ export default function Home() {
         <SectionProcessus sectionname="processus" />
         <SectionAbout sectionname="A propos" />
         <SectionProject sectionname="Mes derniers projects" />
-        <SectionContact sectionname="Contact" />
+        <SectionContact sectionname="contact" />
       </MainStyles>
       <Footer />
     </Layout>

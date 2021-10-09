@@ -8,11 +8,13 @@ const Filter = styled.div`
   margin: 2rem auto;
   .tag-list {
     min-height: 60px;
+
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem 3rem;
     justify-content: center;
     align-items: center;
+
     .link {
       padding: 0.2rem 0.5rem;
       text-transform: capitalize;
@@ -86,6 +88,9 @@ const ProjectsFilter = ({ data }) => {
   return (
     <Filter>
       <div className="tag-list">
+        <Link to="/realisations" className="link">
+          <p>Tout</p>
+        </Link>
         {Object.entries(listTec).map(([key, value], i) => {
           const slug = slugify(key, { lower: true })
           return (

@@ -104,7 +104,7 @@ const SectionContactStyles = styled.section`
 const SectionContact = ({ sectionname }) => {
   return (
     <SectionContactStyles id="contact">
-      <SectionTitle sectionName={sectionname} img={img} imgDot={imgDot} />
+      <SectionTitle sectionname={sectionname} img={img} imgDot={imgDot} />
       <div className="wrap">
         <div className="img-section">
           <img src={img_contact} alt="contact" />

@@ -14,15 +14,6 @@ const TitleStyles = styled.div`
     max-width: 4.3rem;
   }
   h2 {
-    color: ${props =>
-      (props.sectionname === "processus" || props.sectionname) === "Contact"
-        ? "var(--violet)"
-        : props.sectionname === "A propos"
-        ? "var(--orange)"
-        : props.sectionname === "Mes derniers projects"
-        ? "var(--blue)"
-        : "grey"};
-
     margin: 0;
     font-weight: 600;
     text-transform: uppercase;
@@ -32,10 +23,18 @@ const TitleStyles = styled.div`
 `
 
 const SectionTitle = props => {
+  const color =
+    props.sectionname === "processus" || props.sectionname === "contact"
+      ? "var(--violet)"
+      : props.sectionname === "A propos"
+      ? "var(--orange)"
+      : props.sectionname === "Mes derniers projects"
+      ? "var(--blue)"
+      : "grey"
   return (
     <TitleStyles>
       <img src={props.img} alt="processus" />
-      <h2 sectionname={props.sectionname}>{props.sectionname} </h2>
+      <h2 style={{ color }}>{props.sectionname} </h2>
       <img src={props.imgDot} className="dot" alt="" />
     </TitleStyles>
   )
