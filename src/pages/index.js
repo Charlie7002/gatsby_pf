@@ -40,10 +40,10 @@ export default function Home() {
       <ParticlesComp />
       <MainStyles>
         <SectionIntro />
-        <SectionProcessus name="processus" />
-        <SectionAbout name="A propos" />
-        <SectionProject name="Mes derniers projects" />
-        <SectionContact name="Contact" />
+        <SectionProcessus sectionname="processus" />
+        <SectionAbout sectionname="A propos" />
+        <SectionProject sectionname="Mes derniers projects" />
+        <SectionContact sectionname="Contact" />
       </MainStyles>
       <Footer />
     </Layout>

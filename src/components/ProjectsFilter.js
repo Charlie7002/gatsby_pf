@@ -10,42 +10,45 @@ const Filter = styled.div`
     min-height: 60px;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem 3rem;
+    gap: 1.5rem 3rem;
     justify-content: center;
     align-items: center;
     .link {
       padding: 0.2rem 0.5rem;
       text-transform: capitalize;
-      color: var(--orange);
-      border-radius: 0.2rem;
-      border: 1px var(--orange) solid;
+      color: var(--violet-medium);
+      border-radius: 0.25rem;
+      background: var(--blue-light);
       transition: var(--transition);
       display: flex;
       align-items: center;
       justify-content: space-around;
       gap: 0.5rem;
       .number {
-        background: pink;
+        background: var(--white);
         height: 1.2rem;
         width: 1.2rem;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 50%;
-        color: white;
+        color: var(--violet-medium);
       }
       &:hover {
-        background: #ffe6e2;
+        background: var(--violet-medium);
+        color: var(--white);
+        opacity: 0.65;
       }
     }
     a {
       &[aria-current="page"] {
-        background: var(--orange);
+        background: var(--violet-medium);
         color: white;
         .number {
           background: white;
-          color: var(--orange);
+          color: var(--violet-medium);
         }
+        box-shadow: 0px 3px 20px 5px rgba(122, 126, 241, 0.2);
       }
     }
   }

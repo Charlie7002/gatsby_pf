@@ -13,6 +13,15 @@ const NavSection = styled.div`
   }
 `
 
+const TitleStyle = styled.div`
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  text-transform: uppercase;
+  line-height: 0.9rem;
+  transform: scaleY(90%);
+`
+
 export const query = graphql`
   query getProjets($tec: String) {
     projets: allContentfulProject(
@@ -75,6 +84,10 @@ const Projects = ({ data, pageContext }) => {
       <NavSection>
         <div className="top"></div>
       </NavSection>
+      <TitleStyle>
+        <h4>Mes réalisations</h4>
+      </TitleStyle>
+
       <ProjectsFilter />
       <ProjectsList projets={projets} />
     </Layout>

@@ -104,7 +104,7 @@ const SectionProjectStyles = styled.section`
   }
 `
 
-const SectionProject = ({ name }) => {
+const SectionProject = ({ sectionname }) => {
   const {
     allContentfulProject: { nodes: projets },
   } = useStaticQuery(graphql`
@@ -132,7 +132,12 @@ const SectionProject = ({ name }) => {
 
   return (
     <SectionProjectStyles>
-      <SectionTitle name={name} img={img} imgDot={imgDot} id="project" />
+      <SectionTitle
+        sectionname={sectionname}
+        img={img}
+        imgDot={imgDot}
+        id="project"
+      />
       <div className="projectWrap">
         {projets.map(p => {
           const { title, id, img, techno } = p

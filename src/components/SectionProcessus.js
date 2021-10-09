@@ -36,10 +36,10 @@ const SectionProcessStyles = styled.section`
   }
 `
 
-const SectionProcessus = ({ name }) => {
+const SectionProcessus = ({ sectionname }) => {
   return (
     <SectionProcessStyles>
-      <SectionTitle img={img} imgDot={imgDot} name={name} />
+      <SectionTitle img={img} imgDot={imgDot} sectionname={sectionname} />
       <div className="boxwrap">
         {boxProcess.map((proc, i) => {
           return (

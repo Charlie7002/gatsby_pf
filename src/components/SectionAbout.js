@@ -41,11 +41,16 @@ const SectionAboutStyles = styled.section`
   }
 `
 
-const SectionAbout = ({ name }) => {
+const SectionAbout = ({ sectionname }) => {
   return (
     <SectionAboutStyles>
       <div className="white"></div>
-      <SectionTitle name={name} img={img} imgDot={imgDot} id="about" />
+      <SectionTitle
+        sectionname={sectionname}
+        img={img}
+        imgDot={imgDot}
+        id="about"
+      />
       <div className="about">
         <div className="about-text">
           <p>
