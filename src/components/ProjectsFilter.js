@@ -8,7 +8,6 @@ const Filter = styled.div`
   margin: 2rem auto;
   .tag-list {
     min-height: 60px;
-
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem 3rem;

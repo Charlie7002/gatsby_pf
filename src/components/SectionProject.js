@@ -72,6 +72,7 @@ const SectionProjectStyles = styled.section`
     justify-items: center;
     grid-template-rows: 75px 70px 50px;
     height: 100%;
+    border-top: #f0f3ff solid 0.1rem;
   }
   .link-project {
     width: 15.8rem;

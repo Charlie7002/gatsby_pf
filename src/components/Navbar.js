@@ -36,6 +36,9 @@ const Toggle = styled.div`
   height: 100%;
   cursor: pointer;
   padding: 0 10vw;
+  .hamburger-wrap {
+    padding: 1rem;
+  }
   @media (max-width: 768px) {
     display: flex;
   }
@@ -75,6 +78,8 @@ const Hamburger = styled.div`
   z-index: 100;
   border-radius: 5rem;
   position: relative;
+  margin-top: 2rem;
+
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
   ::before,
   ::after {
@@ -114,7 +119,9 @@ const Navbar = () => {
           navbarOpen={navbarOpen}
           onClick={() => setNavbarOpen(!navbarOpen)}
         >
-          {navbarOpen ? <Hamburger open /> : <Hamburger />}
+          <div className="hamburger-wrap">
+            {navbarOpen ? <Hamburger open /> : <Hamburger />}
+          </div>
         </Toggle>
         {navbarOpen ? (
           <Navbox>

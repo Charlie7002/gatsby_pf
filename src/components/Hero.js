@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="hero-text">
         <h2>Hello,</h2>
         <h1>
-          je suis <span>Charlotte Cachet</span>
+          Je suis <span>Charlotte Cachet</span>
         </h1>
         <p>Développeuse web </p>
         <Button className="hero-btn" as="a" href="#contact">
@@ -56,24 +56,21 @@ const HeroContainer = styled.div`
     display: grid;
     width: var(--max-width);
     margin: 0 auto;
-    color: var(--violet);
     grid-template-columns: 19% 35% 55%;
-    grid-template-rows: 30% 10% 10% 15% 6% 10% 1fr;
+    grid-template-rows: 35% 7% 7% 10% 55px 10% 1fr;
     h2 {
       grid-column: 1 / span 2;
       grid-row: 2/3;
-      font-size: 3rem;
+      font-size: 2rem;
       justify-self: start;
-      font-weight: 800;
+      font-weight: 400;
       margin: 0;
     }
     h1 {
       grid-column: 1 / span 2;
       grid-row: 3/4;
-
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       justify-self: start;
-
       span {
         font-weight: 600;
       }
@@ -84,8 +81,9 @@ const HeroContainer = styled.div`
       justify-self: start;
       height: 5rem;
       font-family: var(--title-font);
-      letter-spacing: 0.1rem;
+
       font-size: 3.5rem;
+      font-weight: 700;
       margin-bottom: 3rem;
       background: linear-gradient(
         to right,
