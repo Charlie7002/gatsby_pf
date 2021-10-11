@@ -57,7 +57,7 @@ const HeroContainer = styled.div`
     width: var(--max-width);
     margin: 0 auto;
     grid-template-columns: 19% 35% 55%;
-    grid-template-rows: 35% 7% 7% 10% 55px 10% 1fr;
+    grid-template-rows: 35% 9% 9% 10% 55px 10% 1fr;
     h2 {
       grid-column: 1 / span 2;
       grid-row: 2/3;

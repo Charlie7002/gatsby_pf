@@ -110,10 +110,11 @@ const SectionProject = ({ sectionname }) => {
     allContentfulProject: { nodes: projets },
   } = useStaticQuery(graphql`
     {
-      allContentfulProject(filter: { featured: { eq: true } }) {
+      allContentfulProject(filter: { featured: { eq: true } }, limit: 2) {
         nodes {
           id
           title
+          link
           techno {
             techno
           }
@@ -141,7 +142,7 @@ const SectionProject = ({ sectionname }) => {
       />
       <div className="projectWrap">
         {projets.map(p => {
-          const { title, id, img, techno } = p
+          const { title, id, img, techno, link } = p
           const pathToImage = getImage(img)
 
           //recup les technos
@@ -168,9 +169,9 @@ const SectionProject = ({ sectionname }) => {
                     </span>
                   ))}
                 </div>
-                <Link className="link-project" to="/">
+                <a href={link} className="link-project">
                   Voir le project
-                </Link>
+                </a>
               </div>
             </article>
           )
