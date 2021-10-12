@@ -81,7 +81,6 @@ const HeroContainer = styled.div`
       justify-self: start;
       height: 5rem;
       font-family: var(--title-font);
-
       font-size: 3.5rem;
       font-weight: 700;
       margin-bottom: 3rem;

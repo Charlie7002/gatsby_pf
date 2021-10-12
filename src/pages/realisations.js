@@ -17,20 +17,29 @@ const NavSection = styled.div`
     display: flex;
     margin-bottom: 5rem;
   }
-
   .bg-projetcs-nav {
     margin-top: -0.2rem;
   }
 `
 
 const TitleStyle = styled.div`
+  h4 {
+    transform: scaleY(90%);
+    margin: 2rem auto 5rem;
+    font-family: var(--title-font);
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    background: linear-gradient(to right, var(--orange) 0%, var(--violet) 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    animation: gradient 5s ease infinite;
+  }
   display: flex;
   text-align: center;
   justify-content: center;
   text-transform: uppercase;
-  line-height: 0.9rem;
-  transform: scaleY(90%);
-  margin: 2rem auto 5rem;
 `
 
 export const query = graphql`

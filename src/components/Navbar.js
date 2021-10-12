@@ -1,8 +1,7 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
 import styled from "styled-components"
-import { StaticImage } from "gatsby-plugin-image"
-
+import logo from "../assets/images/logocc.svg"
 import NavbarLinks from "./NavbarLinks"
 
 const Navigation = styled.nav`
@@ -29,6 +28,13 @@ const Navigation = styled.nav`
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    .logo-link {
+      opacity: 0.8;
+      transition: 0.4s all;
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 `
 const Toggle = styled.div`
@@ -110,11 +116,9 @@ const Navbar = () => {
   return (
     <Navigation>
       <div className="wrap-nav">
-        <StaticImage
-          className="logo"
-          src="../assets/icons/logo.svg"
-          alt="logo"
-        ></StaticImage>
+        <Link className="logo-link" to="/">
+          <img className="logo-img" src={logo} alt="logo" />
+        </Link>
         <Toggle
           navbarOpen={navbarOpen}
           onClick={() => setNavbarOpen(!navbarOpen)}

@@ -134,7 +134,7 @@ const SectionIntro = () => {
           </div>
           <div className="tiretwrap">
             <div className="tiret tiret4 "></div>
-            <p>Responsive</p>
+            <p>Affichage adaptatif</p>
           </div>
         </div>
       </div>
