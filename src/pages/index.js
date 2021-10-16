@@ -7,6 +7,7 @@ import Hero from "../components/Hero"
 import styled from "styled-components"
 
 import SectionIntro from "../components/SectionIntro"
+import SectionServices from "../components/SectionServices"
 import SectionProcessus from "../components/SectionProcessus"
 import SectionAbout from "../components/SectionAbout"
 import SectionProject from "../components/SectionProject"
@@ -37,9 +38,10 @@ export default function Home() {
         }}
       />
       <Hero />
-      <ParticlesComp />
+      {/* <ParticlesComp /> */}
       <MainStyles>
         <SectionIntro />
+        <SectionServices sectionname="services" />
         <SectionProcessus sectionname="processus" />
         <SectionAbout sectionname="A propos" />
         <SectionProject sectionname="Mes derniers projects" />

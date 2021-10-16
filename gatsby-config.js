@@ -17,6 +17,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-mailgo`,
     `gatsby-plugin-smoothscroll`,
+
     {
       resolve: `gatsby-source-contentful`,
       options: {

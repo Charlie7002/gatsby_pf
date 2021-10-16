@@ -43,7 +43,7 @@ const SectionAboutStyles = styled.section`
 
 const SectionAbout = ({ sectionname }) => {
   return (
-    <SectionAboutStyles>
+    <SectionAboutStyles id="me">
       <div className="white"></div>
       <SectionTitle
         sectionname={sectionname}

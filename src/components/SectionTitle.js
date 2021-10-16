@@ -28,7 +28,8 @@ const SectionTitle = props => {
       ? "var(--violet)"
       : props.sectionname === "A propos"
       ? "var(--orange)"
-      : props.sectionname === "Mes derniers projects"
+      : props.sectionname === "Mes derniers projects" ||
+        props.sectionname === "services"
       ? "var(--blue)"
       : "grey"
   return (
