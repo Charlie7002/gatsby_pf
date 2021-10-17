@@ -11,15 +11,19 @@ const SectionListServices = styled.section`
     justify-content: space-between;
     align-items: center;
     article {
+      .img-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       display: grid;
       grid-template-rows: 17rem 4rem 8rem;
       align-items: center;
       justify-items: center;
-
       img {
         object-fit: cover;
-        width: 90%;
-        height: 90%;
+        width: 80%;
+        height: 80%;
       }
       h6 {
         font-size: 2rem;
@@ -42,9 +46,11 @@ const SectionServices = ({ sectionname }) => {
   return (
     <SectionListServices id="services">
       <SectionTitle sectionname={sectionname} img={img} imgDot={imgDot} />
+
       <div className="wrap-services">
         {services.map(service => {
           const { id, title, img, text } = service
+          const i = JSON.stringify(img)
           return (
             <article key={id}>
               <div className="img-wrap">
