@@ -14,7 +14,7 @@ const SectionAboutStyles = styled.section`
     top: 50%;
     left: 49%;
     transform: translate(-50%, -50%);
-    background: #fffaf7;
+    background: #fffdfb;
     height: 45rem;
   }
   .about {

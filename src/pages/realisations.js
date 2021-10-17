@@ -5,6 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 import ProjectsFilter from "../components/ProjectsFilter"
 import ProjectsList from "../components/ProjectsList"
+import Footer from "../components/Footer"
 
 const NavSection = styled.div`
   width: 100%;
@@ -12,10 +13,11 @@ const NavSection = styled.div`
   justify-content: flex-end;
   .img-wrap {
     width: 60%;
-    right: 0;
+    top: -3rem;
+    right: 7rem;
     position: relative;
     display: flex;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
   .bg-projetcs-nav {
     margin-top: -0.2rem;
@@ -33,7 +35,7 @@ const TitleStyle = styled.div`
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 600;
+    font-weight: 800;
     animation: gradient 5s ease infinite;
   }
   display: flex;
@@ -93,6 +95,7 @@ const Projects = ({ data, pageContext }) => {
 
       <ProjectsFilter />
       <ProjectsList projets={projets} />
+      <Footer />
     </Layout>
   )
 }

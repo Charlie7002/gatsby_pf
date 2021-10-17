@@ -5,7 +5,8 @@ import styled from "styled-components"
 
 const SectionFooterStyles = styled.footer`
   position: relative;
-  padding-top: 65px;
+  padding-top: 4.06rem;
+  margin-top: -9rem;
   .text {
     position: absolute;
     color: white;

@@ -15,17 +15,12 @@ const Navigation = styled.nav`
   z-index: 55;
   width: 100%;
   align-self: center;
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     position: absolute;
-    height: 6vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    left: 0;
   }
   .wrap-nav {
     width: var(--max-width);
-    margin: 0 auto;
+    margin: 1.1rem auto 0;
     display: flex;
     justify-content: space-between;
     .logo-link {
@@ -42,11 +37,17 @@ const Toggle = styled.div`
   height: 100%;
   cursor: pointer;
   padding: 0 10vw;
-  .hamburger-wrap {
-    padding: 1rem;
-  }
-  @media (max-width: 768px) {
+  position: relative;
+
+  @media (max-width: 1000px) {
     display: flex;
+    .hamburger-wrap {
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      right: 24px;
+      z-index: 50;
+    }
   }
 `
 
@@ -56,13 +57,14 @@ const Navbox = styled.div`
   justify-content: flex-end;
   align-items: center;
   font-size: 1.1rem;
-  gap: 7rem;
+  gap: 5.6rem;
   width: 55%;
+
   a {
     color: ${props => (props.open ? "#FFFFFF" : "#ff917d")};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     padding-top: 2rem;
     background-color: var(--orange-light);
     flex-direction: column;
@@ -85,6 +87,9 @@ const Hamburger = styled.div`
   border-radius: 5rem;
   position: relative;
   margin-top: 2rem;
+  @media (max-width: 600px) {
+    background: var(--violet);
+  }
 
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
   ::before,
@@ -96,6 +101,9 @@ const Hamburger = styled.div`
     position: absolute;
     transition: all 0.3s linear;
     border-radius: 5rem;
+    @media (max-width: 600px) {
+      background: var(--violet);
+    }
   }
   ::before {
     transform: ${props =>

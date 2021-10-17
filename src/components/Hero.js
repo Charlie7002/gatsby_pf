@@ -47,6 +47,9 @@ const HeroContainer = styled.div`
   z-index: 1; */
   .hero-img {
     grid-area: 1/1;
+    @media (max-width: 650px) {
+      display: none;
+    }
   }
   .hero-text {
     z-index: 5;
@@ -57,7 +60,18 @@ const HeroContainer = styled.div`
     width: var(--max-width);
     margin: 0 auto;
     grid-template-columns: 19% 35% 55%;
-    grid-template-rows: 35% 9% 9% 10% 55px 10% 1fr;
+    grid-template-rows: 35% 9% 9% 13% 55px 11% 1fr;
+    @media (max-width: 1180px) {
+      margin: 0 2.5rem;
+    }
+    @media (max-width: 650px) {
+      display: flex;
+      flex-direction: column;
+      width: 90vw;
+      margin: 10rem auto 0;
+      padding: 0.2rem;
+      text-align: center;
+    }
     h2 {
       grid-column: 1 / span 2;
       grid-row: 2/3;
@@ -114,6 +128,25 @@ const HeroContainer = styled.div`
         }
       }
     }
+    @media (max-width: 650px) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.7rem;
+      }
+      p {
+        font-size: 2.5rem;
+        height: 8rem;
+        line-height: 3rem;
+        margin-bottom: 1rem;
+      }
+      a.hero-btn {
+        height: 3.6rem;
+        width: 70vw;
+        margin: 0 auto;
+      }
+    }
   }
   @keyframes gradient {
     0% {
@@ -139,10 +172,17 @@ const Button = styled.button`
   align-items: center;
   justify-self: stretch;
   align-self: stretch;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-family: var(--title-font);
   border-radius: var(--borderRadius-btn);
   background: var(--lg-violet-btn);
   box-shadow: 10px 10px 30px 2px rgba(179, 114, 243, 0.46);
+  transition: var(--transition);
+  &:hover {
+    filter: hue-rotate(20%);
+    filter: hue-rotate(30deg);
+    transform: translateY(-2px);
+    box-shadow: 0px 10px 40px 2px rgba(179, 114, 243, 0.7);
+  }
 `
 export default Hero

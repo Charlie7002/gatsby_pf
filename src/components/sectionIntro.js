@@ -21,7 +21,8 @@ const SectionIntroStyles = styled.section`
   }
 
   .set1-img {
-    height: 26rem;
+    max-height: 26rem;
+    width: auto;
   }
   .tiretwrap {
     display: flex;
@@ -102,8 +103,8 @@ const SectionIntro = () => {
     <SectionIntroStyles>
       <div className="bg"></div>
       <h2>
-        Vous n'avez pas besoin d'un site Web, vous avez besoin d'un site Web
-        <span> performant </span>.
+        Vous avez besoin d'un site Web, mais surtout d'un site Web
+        <span> performant </span>
       </h2>
       <h5>
         Ce mot suplémentaire fait toute la différence entre une

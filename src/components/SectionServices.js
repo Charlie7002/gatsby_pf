@@ -3,13 +3,18 @@ import SectionTitle from "./SectionTitle"
 import img from "../assets/icons/star.svg"
 import imgDot from "../assets/images/blue_dot.svg"
 import styled from "styled-components"
-import { services } from "../utils/constants"
+import { SvgAnimateDesign } from "./SvgAnimate"
 
 const SectionListServices = styled.section`
+  background: #ffffffd1;
+  z-index: 5;
+  position: relative;
+  padding: 2rem;
   .wrap-services {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     article {
       .img-wrap {
         display: flex;
@@ -48,19 +53,33 @@ const SectionServices = ({ sectionname }) => {
       <SectionTitle sectionname={sectionname} img={img} imgDot={imgDot} />
 
       <div className="wrap-services">
-        {services.map(service => {
-          const { id, title, img, text } = service
-          const i = JSON.stringify(img)
-          return (
-            <article key={id}>
-              <div className="img-wrap">
-                <img src={img} alt={title} />
-              </div>
-              <h6>{title}</h6>
-              <p>{text}</p>
-            </article>
-          )
-        })}
+        <article>
+          <SvgAnimateDesign />
+
+          <h6>Web design</h6>
+          <p>
+            Votre identité visuelle est crée sur mesure pour atteindre la cible
+            désirée.
+          </p>
+        </article>
+
+        <article>
+          <SvgAnimateDesign />
+          <h6>Développement</h6>
+          <p>
+            La création de votre site web indispensable pour améliorer la
+            visibilité de votre activité.
+          </p>
+        </article>
+
+        <article>
+          <SvgAnimateDesign />
+          <h6>Référencement</h6>
+          <p>
+            Optimisation du contenu votre site afin qu’il apparaisse dans les
+            moteurs de recherche.
+          </p>
+        </article>
       </div>
     </SectionListServices>
   )
