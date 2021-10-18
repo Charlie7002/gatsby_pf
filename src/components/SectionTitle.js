@@ -20,6 +20,13 @@ const TitleStyles = styled.div`
     line-height: 0.9rem;
     transform: scaleY(90%);
   }
+
+  @media (max-width: 640px) {
+    gap: 2rem;
+    h2 {
+      font-size: 2.1em;
+    }
+  }
 `
 
 const SectionTitle = props => {

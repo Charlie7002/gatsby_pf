@@ -8,7 +8,6 @@ const SectionIntroStyles = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
-
   h2,
   h5,
   h4 {
@@ -95,6 +94,56 @@ const SectionIntroStyles = styled.section`
     width: 100%;
     opacity: 0.8;
     top: -1rem;
+  }
+
+  @media (max-width: 1010px) {
+    h2 {
+      font-size: 1.7rem !important;
+      margin-bottom: 2.2rem !important;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 2.2rem !important;
+    }
+
+    h4 {
+      font-size: 1.4rem;
+      margin-bottom: 2.2rem !important;
+    }
+
+    h5 {
+      font-size: 1.3rem;
+      margin-bottom: 2.2rem !important;
+    }
+  }
+  @media (max-width: 830px) {
+    .bg {
+      height: 320px;
+    }
+    .pointbox {
+      flex-direction: column;
+      img.set1-img {
+        width: 260px;
+      }
+      .pointbox-tiret {
+        .tiretwrap {
+          justify-content: center;
+          width: fit-content;
+          margin: 0 auto;
+          p {
+            margin-left: 2.8rem;
+            font-size: 1.3rem;
+          }
+          .tiret {
+            width: 0px;
+            &:before {
+              width: 1rem;
+              height: 1rem;
+            }
+          }
+        }
+      }
+    }
   }
 `
 

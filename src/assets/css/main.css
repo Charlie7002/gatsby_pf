@@ -162,3 +162,10 @@ section {
   font-size: 1.57rem;
   text-transform: capitalize;
 }
+
+@media (max-width: 1010px) {
+  section {
+    padding: 1rem;
+    margin: 2rem auto 8rem;
+  }
+}

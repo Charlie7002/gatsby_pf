@@ -34,6 +34,26 @@ const SectionProcessStyles = styled.section`
       }
     }
   }
+  @media (max-width: 960px) {
+    .boxwrap {
+      grid-template-columns: minmax(200px, 400px);
+      grid-template-rows: repeat(4, 1fr);
+      justify-items: center;
+    }
+    .box {
+      grid-template-rows: 7rem 4rem 1fr;
+      padding: 1rem;
+      img {
+        height: 60px;
+      }
+      h4 {
+        font-size: 1.55rem;
+      }
+      p {
+        padding-bottom: 1rem;
+      }
+    }
+  }
 `
 
 const SectionProcessus = ({ sectionname }) => {

@@ -45,6 +45,11 @@ const SectionListServices = styled.section`
       }
     }
   }
+  @media (max-width: 1010px) {
+    .wrap-services {
+      flex-direction: column;
+    }
+  }
 `
 
 const SectionServices = ({ sectionname }) => {
