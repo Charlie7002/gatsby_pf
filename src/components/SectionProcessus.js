@@ -34,15 +34,17 @@ const SectionProcessStyles = styled.section`
       }
     }
   }
-  @media (max-width: 960px) {
+  @media (max-width: 900px) {
     .boxwrap {
-      grid-template-columns: minmax(200px, 400px);
-      grid-template-rows: repeat(4, 1fr);
-      justify-items: center;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      align-items: center;
     }
     .box {
       grid-template-rows: 7rem 4rem 1fr;
       padding: 1rem;
+      max-width: 600px;
       img {
         height: 60px;
       }

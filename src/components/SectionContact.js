@@ -99,6 +99,14 @@ const SectionContactStyles = styled.section`
       font-size: 1.2rem;
     }
   }
+
+  @media (max-width: 1140px) {
+    padding: 0 2rem;
+  }
+
+  @media (max-width: 740px) {
+    padding: 0 2rem;
+  }
 `
 
 const SectionContact = ({ sectionname }) => {

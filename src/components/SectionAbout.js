@@ -39,6 +39,28 @@ const SectionAboutStyles = styled.section`
       margin-bottom: 2rem;
     }
   }
+  @media (max-width: 900px) {
+    padding: 1rem;
+    .img-box {
+      margin-top: 6rem;
+    }
+    img {
+      height: 150px;
+    }
+    .about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .about-text {
+      max-width: 500px;
+      order: 2;
+      font-size: 1rem;
+      padding: 1rem;
+      margin: 1rem auto 5rem;
+    }
+  }
 `
 
 const SectionAbout = ({ sectionname }) => {

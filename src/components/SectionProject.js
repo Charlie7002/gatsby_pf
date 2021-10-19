@@ -103,6 +103,49 @@ const SectionProjectStyles = styled.section`
       box-shadow: 0px 10px 40px 2px rgba(179, 114, 243, 0.7);
     }
   }
+  @media (max-width: 1330px) {
+    .projectWrap {
+      justify-content: center;
+      padding: 0 4rem;
+    }
+  }
+
+  @media (max-width: 970px) {
+    .projectWrap {
+      margin-top: 2rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .projectWrap {
+      margin-top: -8rem;
+    }
+    .project {
+      width: auto;
+      height: auto;
+      grid-template-columns: 300px;
+    }
+    .img-box {
+      height: 200px;
+    }
+    .wrap-text {
+      padding-bottom: 2rem;
+      grid-template-rows: 48px 70px 36px;
+      border-top: #f0f3ff solid 0.1rem;
+    }
+    .technos {
+      padding: 0.5rem 0;
+    }
+    .link-project {
+      margin-top: 1rem;
+    }
+    .project:first-child::before {
+      display: none;
+    }
+  }
 `
 
 const SectionProject = ({ sectionname }) => {
