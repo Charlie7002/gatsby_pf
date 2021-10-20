@@ -107,6 +107,19 @@ const SectionContactStyles = styled.section`
   @media (max-width: 740px) {
     padding: 0 2rem;
   }
+  @media (max-width: 700px) {
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      .img-section {
+        margin-top: -4rem;
+        font-size: 2rem;
+        img {
+          height: 160px;
+        }
+      }
+    }
+  }
 `
 
 const SectionContact = ({ sectionname }) => {

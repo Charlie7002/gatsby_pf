@@ -4,9 +4,10 @@ import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 const SectionFooterStyles = styled.footer`
-  position: relative;
+  position: absolute;
   padding-top: 4.06rem;
   margin-top: -9rem;
+
   .text {
     position: absolute;
     color: white;
@@ -17,11 +18,42 @@ const SectionFooterStyles = styled.footer`
     margin-top: 100px;
     text-align: center;
   }
+  @media (max-width: 1420px) {
+    .text {
+      margin-top: 80px;
+    }
+    margin-top: 0;
+  }
+  @media (max-width: 1000px) {
+    .text {
+      font-size: 0.8rem;
+      margin-top: 56px;
+    }
+  }
+  @media (max-width: 650px) {
+    padding-top: 0;
+    .text {
+      font-size: 0.8rem;
+      margin-top: 56px;
+      background: pink;
+      width: 100%;
+      border-radius: 50% 50% 0 0;
+      padding: 1rem;
+      background: var(--lg-violet-btn);
+    }
+    img {
+      display: none;
+    }
+  }
 `
 
 const Footer = () => {
   return (
     <SectionFooterStyles>
+      <div className="text">
+        <p>Mentions légales / Données personnelles</p>
+        <p>Developed and designed with ☕ by Charlotte Cachet</p>
+      </div>
       <StaticImage
         className="footer-img"
         src="../assets/images/footer_bg.jpg"
@@ -32,10 +64,6 @@ const Footer = () => {
         layout="constrained"
         formats={["auto", "webp", "avif"]}
       />
-      <div className="text">
-        <p>Mentions légales / Données personnelles</p>
-        <p>Developed and designed with ☕ by Charlotte Cachet</p>
-      </div>
     </SectionFooterStyles>
   )
 }
