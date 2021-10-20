@@ -18,7 +18,7 @@ const NavItem = styled(Link)`
     left: 50%;
     transform: translate(-50%, -50%);
     height: 1px;
-    background: white;
+    background: ${props => (props.open ? "#7a7ef1" : "#fff")};
     opacity: 0.7;
     transition: 0.3s all;
   }
@@ -31,8 +31,7 @@ const NavItem = styled(Link)`
     }
   }
   @media (max-width: 768px) {
-    padding: 20px 0;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     z-index: 6;
   }
   .active-link {
@@ -44,7 +43,7 @@ const NavItem = styled(Link)`
   }
 `
 
-const NavbarLinks = ({ navbarOpen }) => {
+const NavbarLinks = ({ navbarOpen, closeNavbarOpen }) => {
   return (
     <>
       <NavItem activeClassName="active-link" to="/">

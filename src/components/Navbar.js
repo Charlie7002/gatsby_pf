@@ -43,7 +43,7 @@ const Toggle = styled.div`
     display: flex;
     .hamburger-wrap {
       padding: 1rem;
-      position: fixed;
+      position: ${props => (props.open ? "absolute" : "fixed")};
       top: 0;
       right: 24px;
       z-index: 50;
@@ -61,11 +61,11 @@ const Navbox = styled.div`
   width: 55%;
 
   a {
-    color: ${props => (props.open ? "#FFFFFF" : "#ff917d")};
+    color: ${props => (props.open ? "#FFFFFF" : "var(--violet)")};
   }
 
   @media (max-width: 1000px) {
-    padding-top: 2rem;
+    padding-top: 5rem;
     background-color: var(--orange-light);
     flex-direction: column;
     position: fixed;
@@ -74,6 +74,11 @@ const Navbox = styled.div`
     transition: all 0.3s ease-in;
     top: 0;
     left: ${props => (props.open ? "-100%" : "0")};
+  }
+  @media (max-width: 768px) {
+    background: white;
+    height: 600px;
+    border-bottom: 2px solid var(--violet);
   }
 `
 
@@ -96,7 +101,7 @@ const Hamburger = styled.div`
   ::after {
     width: 30px;
     height: 3px;
-    background-color: ${props => (props.open ? "#ff917d" : "#fff")};
+    background-color: ${props => (props.open ? "var(--violet)" : "#fff")};
     content: "";
     position: absolute;
     transition: all 0.3s linear;
@@ -121,6 +126,7 @@ const Hamburger = styled.div`
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
+
   return (
     <Navigation>
       <div className="wrap-nav">

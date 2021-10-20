@@ -134,6 +134,7 @@ const HeroContainer = styled.div`
       }
       h2 {
         font-size: 1.7rem;
+        padding-bottom: 0.3rem;
       }
       p {
         font-size: 2.5rem;
@@ -143,7 +144,7 @@ const HeroContainer = styled.div`
       }
       a.hero-btn {
         height: 3.6rem;
-        width: 70vw;
+        width: 60vw;
         margin: 0 auto;
       }
     }
