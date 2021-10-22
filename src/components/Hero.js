@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import "../assets/css/main.css"
 import styled from "styled-components"
 import { AiFillGithub, AiOutlineLinkedin } from "react-icons/Ai"
+import girlpf from "../assets/icons/girlpf.svg"
 
 const Hero = () => {
   return (
@@ -23,6 +24,9 @@ const Hero = () => {
           Je suis <span>Charlotte Cachet</span>
         </h1>
         <p>Développeuse web </p>
+        <div className="imgres-wrap">
+          <img src={girlpf} alt="" />
+        </div>
         <Button className="hero-btn" as="a" href="#contact">
           Contact
         </Button>
@@ -45,11 +49,17 @@ const HeroContainer = styled.div`
   display: grid;
   /* position: relative;
   z-index: 1; */
+
   .hero-img {
     grid-area: 1/1;
+    //hide big picture
     @media (max-width: 650px) {
       display: none;
     }
+  }
+  //hide small picture
+  .imgres-wrap {
+    display: none;
   }
   .hero-text {
     z-index: 5;
@@ -129,6 +139,23 @@ const HeroContainer = styled.div`
       }
     }
     @media (max-width: 650px) {
+      //show small picture
+      .imgres-wrap {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        position: relative;
+        margin: -12rem auto 2rem;
+        @media (max-width: 450px) {
+          margin: -6rem auto 2rem;
+        }
+        img {
+          width: 70%;
+          @media (max-width: 450px) {
+            width: 80%;
+          }
+        }
+      }
       h1 {
         font-size: 2rem;
       }
@@ -149,6 +176,7 @@ const HeroContainer = styled.div`
       }
     }
   }
+
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
