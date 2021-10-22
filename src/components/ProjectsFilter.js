@@ -4,7 +4,7 @@ import styled from "styled-components"
 import slugify from "slugify"
 
 const Filter = styled.div`
-  width: var(--max-width);
+  max-width: var(--max-width);
   margin: 2rem auto;
   .tag-list {
     min-height: 60px;
@@ -13,7 +13,6 @@ const Filter = styled.div`
     gap: 1.5rem 3rem;
     justify-content: center;
     align-items: center;
-
     .link {
       padding: 0.2rem 0.5rem;
       text-transform: capitalize;

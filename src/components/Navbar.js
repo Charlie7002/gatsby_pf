@@ -20,7 +20,7 @@ const Navigation = styled.nav`
   }
   .wrap-nav {
     width: var(--max-width);
-    margin: 1.1rem auto 0;
+    margin: 2.1rem auto 0;
     display: flex;
     justify-content: space-between;
     .logo-link {

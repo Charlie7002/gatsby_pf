@@ -7,17 +7,37 @@ import ProjectsFilter from "../components/ProjectsFilter"
 import ProjectsList from "../components/ProjectsList"
 import Footer from "../components/Footer"
 
+console.clear()
+
 const NavSection = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  transition: var(--transition);
   .img-wrap {
-    width: 60%;
+    width: 65%;
     top: -3rem;
     right: 7rem;
     position: relative;
     display: flex;
     margin-bottom: 3rem;
+    @media (max-width: 1700px) {
+      right: 2rem;
+    }
+    @media (max-width: 1570px) {
+      top: -1rem;
+      right: 1rem;
+    }
+    @media (max-width: 1350px) {
+      right: -7rem;
+      width: 80%;
+    }
+    @media (max-width: 1100px) {
+      top: 0;
+    }
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
   .bg-projetcs-nav {
     margin-top: -0.2rem;
