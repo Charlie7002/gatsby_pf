@@ -3,7 +3,7 @@ import SectionTitle from "./SectionTitle"
 import img from "../assets/icons/star.svg"
 import imgDot from "../assets/images/blue_dot.svg"
 import styled from "styled-components"
-import { SvgAnimateDesign } from "./SvgAnimate"
+import { SvgAnimateDesign, SvgAnimateDev, SvgAnimateSeo } from "./SvgAnimate"
 
 const SectionListServices = styled.section`
   background: #ffffffd1;
@@ -26,7 +26,7 @@ const SectionListServices = styled.section`
       align-items: center;
       justify-items: center;
       img {
-        object-fit: cover;
+        object-fit: contain;
         width: 80%;
         height: 80%;
       }
@@ -69,7 +69,7 @@ const SectionServices = ({ sectionname }) => {
         </article>
 
         <article>
-          <SvgAnimateDesign />
+          <SvgAnimateDev />
           <h6>Développement</h6>
           <p>
             La création de votre site web indispensable pour améliorer la
@@ -78,7 +78,7 @@ const SectionServices = ({ sectionname }) => {
         </article>
 
         <article>
-          <SvgAnimateDesign />
+          <SvgAnimateSeo />
           <h6>Référencement</h6>
           <p>
             Optimisation du contenu votre site afin qu’il apparaisse dans les

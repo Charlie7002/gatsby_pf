@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import logo from "../assets/images/logocc.svg"
 import NavbarLinks from "./NavbarLinks"
@@ -66,24 +66,20 @@ const Navbox = styled.div`
 
   @media (max-width: 1000px) {
     padding-top: 5rem;
-    background-color: var(--orange-light);
+    background-color: var(--white);
     flex-direction: column;
     position: fixed;
     width: 100%;
+    height: 100%;
     justify-content: flex-start;
     transition: all 0.3s ease-in;
     top: 0;
     left: ${props => (props.open ? "-100%" : "0")};
   }
-  @media (max-width: 768px) {
-    background: white;
-    height: 600px;
-    border-bottom: 2px solid var(--violet);
-  }
 `
 
 const Hamburger = styled.div`
-  background-color: ${props => (props.open ? "#ff917d" : "#fff")};
+  background-color: ${props => (props.open ? "var(--violet)" : "#fff")};
   width: 30px;
   height: 3px;
   transition: all 0.3s linear;
@@ -143,7 +139,10 @@ const Navbar = () => {
         </Toggle>
         {navbarOpen ? (
           <Navbox>
-            <NavbarLinks navbarOpen={navbarOpen} />
+            <NavbarLinks
+              navbarOpen={navbarOpen}
+              setNavbarOpen={setNavbarOpen}
+            />
           </Navbox>
         ) : (
           <Navbox open>

@@ -30,9 +30,12 @@ const NavItem = styled(Link)`
       opacity: 1;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     font-size: 1.2rem;
     z-index: 6;
+    &:after {
+      background: var(--violet);
+    }
   }
   .active-link {
     opacity: 1;
@@ -43,19 +46,28 @@ const NavItem = styled(Link)`
   }
 `
 
-const NavbarLinks = ({ navbarOpen, closeNavbarOpen }) => {
+const NavbarLinks = ({ navbarOpen, setNavbarOpen }) => {
+  console.log(navbarOpen)
   return (
     <>
       <NavItem activeClassName="active-link" to="/">
         Accueil
       </NavItem>
-      <NavItem to="/#services" activeClassName="active-link">
+      <NavItem
+        to="/#services"
+        activeClassName="active-link"
+        onClick={() => navbarOpen && setNavbarOpen(false)}
+      >
         Services
       </NavItem>
       <NavItem activeClassName="active-link" to="/realisations">
         Réalisations
       </NavItem>
-      <NavItem to="/#me" activeClassName="active-link">
+      <NavItem
+        to="/#me"
+        activeClassName="active-link"
+        onClick={() => navbarOpen && setNavbarOpen(false)}
+      >
         A propos
       </NavItem>
     </>
