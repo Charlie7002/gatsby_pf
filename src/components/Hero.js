@@ -1,10 +1,9 @@
 import React from "react"
-
 import { StaticImage } from "gatsby-plugin-image"
-import "../assets/css/main.css"
 import styled from "styled-components"
 import { AiFillGithub, AiOutlineLinkedin } from "react-icons/Ai"
 import girlpf from "../assets/icons/girlpf.svg"
+import "../assets/css/main.css"
 
 const Hero = () => {
   return (

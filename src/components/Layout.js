@@ -1,7 +1,7 @@
 import React from "react"
-import "normalize.css"
-import "../assets/css/main.css"
 import Navbar from "./Navbar"
+import "../assets/css/main.css"
+import "normalize.css"
 
 if (typeof window !== "undefined") {
   // eslint-disable-next-line global-require

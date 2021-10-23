@@ -116,7 +116,7 @@ const SingleProjet = ({ title, description, id, link, img, techno }) => {
             ))
             .reduce((prev, curr) => [prev, ", ", curr])}
         </div>
-        <a className="btn" href={link} target="_blank" rel="web site">
+        <a className="btn" href={link} rel="noopener" target="_blank">
           Voir le site
         </a>
       </div>

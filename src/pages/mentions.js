@@ -1,9 +1,9 @@
 import React from "react"
-import ScrollToTop from "react-scroll-to-top"
 import styled from "styled-components"
 import Layout from "../components/Layout"
-import Arrow from "../components/Arrow"
 import { StaticImage } from "gatsby-plugin-image"
+import ScrollToTop from "react-scroll-to-top"
+import Arrow from "../components/Arrow"
 import Footer from "../components/Footer"
 import Seo from "../components/SEO"
 

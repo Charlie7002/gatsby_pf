@@ -122,9 +122,9 @@ const Projects = ({ data, pageContext, location }) => {
             src="../assets/images/bgnav.png"
             alt=""
             placeholder="tracedSVG"
-            width="1200"
+            width={1200}
             layout="constrained"
-            height="150"
+            height={150}
             className="bg-projetcs-nav"
           />
         </div>
