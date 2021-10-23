@@ -15,8 +15,10 @@ import SectionContact from "../components/SectionContact"
 import Footer from "../components/Footer"
 
 import Arrow from "../components/Arrow"
+import image from "../assets/icons/girlpf.svg"
 
 import ScrollToTop from "react-scroll-to-top"
+import Seo from "../components/SEO"
 
 const MainStyles = styled.main`
   @media (max-width: 1200px) {
@@ -24,9 +26,15 @@ const MainStyles = styled.main`
   }
 `
 
-export default function Home() {
+export default function Home({ location }) {
   return (
     <Layout>
+      <Seo
+        title="Accueil"
+        description="Charlotte Cachet, création de site internet, développement web, web design, réferencement"
+        image={image}
+        location={location}
+      />
       <ScrollToTop
         smooth
         component={<Arrow />}

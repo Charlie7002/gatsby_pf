@@ -10,6 +10,12 @@ require("dotenv").config({
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: "Charlotte Cachet, web développement",
+    description:
+      "Création de site internet, web design, développement, referencement",
+    author: "Charlotte Cachet",
+  },
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
@@ -17,6 +23,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-mailgo`,
     `gatsby-plugin-smoothscroll`,
+    `gatsby-plugin-react-helmet`,
 
     {
       resolve: `gatsby-source-contentful`,

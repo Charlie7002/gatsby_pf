@@ -5,6 +5,7 @@ import Layout from "../components/Layout"
 import Arrow from "../components/Arrow"
 import { StaticImage } from "gatsby-plugin-image"
 import Footer from "../components/Footer"
+import Seo from "../components/SEO"
 
 const StyleMentions = styled.div`
   max-width: var(--max-width);
@@ -86,6 +87,7 @@ const NavSection = styled.div`
 const mentions = () => {
   return (
     <Layout>
+      <Seo title="Mentions légales" />
       <NavSection>
         <div className="img-wrap">
           <StaticImage

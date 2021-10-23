@@ -6,6 +6,7 @@ import { graphql } from "gatsby"
 import ProjectsFilter from "../components/ProjectsFilter"
 import ProjectsList from "../components/ProjectsList"
 import Footer from "../components/Footer"
+import Seo from "../components/SEO"
 
 const NavSection = styled.div`
   width: 100%;
@@ -110,6 +111,11 @@ const Projects = ({ data, pageContext, location }) => {
 
   return (
     <Layout>
+      <Seo
+        title="Réalisations"
+        description="Charlotte Cachet, développement web, réalisations"
+        location={location}
+      />
       <NavSection>
         <div className="img-wrap">
           <StaticImage
