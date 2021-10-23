@@ -6,7 +6,7 @@ const ProjectsStyles = styled.section`
   .wrap-list {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
     margin-top: 5rem;
   }
   article {
@@ -14,6 +14,15 @@ const ProjectsStyles = styled.section`
     grid-template-columns: 40% 60%;
     box-shadow: 0px 10px 40px rgba(103, 106, 187, 0.2);
     border-radius: 1rem;
+    @media (max-width: 900px) {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      max-width: 28rem;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
   }
   .technos {
     display: flex;
@@ -39,6 +48,14 @@ const ProjectsStyles = styled.section`
     }
     p {
       text-align: center;
+    }
+    @media (max-width: 970px) {
+      padding: 1rem 0;
+    }
+    @media (max-width: 900px) {
+      min-height: 14.5rem;
+      padding: 1rem;
+      gap: 1rem;
     }
   }
   .btn {

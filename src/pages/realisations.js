@@ -36,6 +36,19 @@ const NavSection = styled.div`
       top: 0;
     }
     @media (max-width: 1000px) {
+      right: -76rem;
+      height: 113px;
+      position: absolute;
+      width: 148%;
+    }
+    @media (max-width: 918px) {
+      right: -60rem;
+    }
+    @media (max-width: 748px) {
+      right: -60rem;
+      width: 171%;
+    }
+    @media (max-width: 600px) {
       display: none;
     }
   }
@@ -62,6 +75,9 @@ const TitleStyle = styled.div`
   text-align: center;
   justify-content: center;
   text-transform: uppercase;
+  @media (max-width: 1000px) {
+    margin-top: 5rem;
+  }
 `
 
 export const query = graphql`
@@ -91,7 +107,7 @@ export const query = graphql`
   }
 `
 
-const Projects = ({ data, pageContext }) => {
+const Projects = ({ data, pageContext, location }) => {
   const projets = data.projets.nodes
 
   return (

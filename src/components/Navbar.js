@@ -43,7 +43,7 @@ const Toggle = styled.div`
     display: flex;
     .hamburger-wrap {
       padding: 1rem;
-      position: ${props => (props.open ? "absolute" : "fixed")};
+      position: ${props => (props.open ? "fixed" : "absolute")};
       top: 0;
       right: 24px;
       z-index: 50;

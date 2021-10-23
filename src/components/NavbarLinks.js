@@ -47,7 +47,6 @@ const NavItem = styled(Link)`
 `
 
 const NavbarLinks = ({ navbarOpen, setNavbarOpen }) => {
-  console.log(navbarOpen)
   return (
     <>
       <NavItem activeClassName="active-link" to="/">

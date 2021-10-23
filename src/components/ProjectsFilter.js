@@ -13,6 +13,9 @@ const Filter = styled.div`
     gap: 1.5rem 3rem;
     justify-content: center;
     align-items: center;
+    @media (max-width: 900px) {
+      gap: 1rem;
+    }
     .link {
       padding: 0.2rem 0.5rem;
       text-transform: capitalize;
