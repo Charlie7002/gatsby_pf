@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import logo from "../assets/images/logocc.svg"
 import NavbarLinks from "./NavbarLinks"
@@ -29,6 +29,12 @@ const Navigation = styled.nav`
       &:hover {
         opacity: 1;
       }
+      @media (max-width: 650px) {
+        .logo-img {
+          height: 4rem;
+          margin-left: 2rem;
+        }
+      }
     }
   }
 `
@@ -42,8 +48,8 @@ const Toggle = styled.div`
   @media (max-width: 1000px) {
     display: flex;
     .hamburger-wrap {
-      padding: 1rem;
-      position: ${props => (props.open ? "fixed" : "absolute")};
+      /* padding: 1rem; */
+      position: ${props => (props.navbarOpen ? "fixed" : "absolute")};
       top: 0;
       right: 24px;
       z-index: 50;

@@ -21,6 +21,9 @@ import ScrollToTop from "react-scroll-to-top"
 const MainStyles = styled.main`
   /* max-width: 73rem; */
   /* margin: 0 auto; */
+  @media (max-width: 1200px) {
+    margin: 0 1rem;
+  }
 `
 
 export default function Home() {

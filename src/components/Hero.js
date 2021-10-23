@@ -161,7 +161,7 @@ const HeroContainer = styled.div`
       }
       h2 {
         font-size: 1.7rem;
-        padding-bottom: 0.3rem;
+        padding-bottom: 2.3rem;
       }
       p {
         font-size: 2.5rem;
