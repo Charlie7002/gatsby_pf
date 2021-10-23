@@ -45,13 +45,19 @@ const SectionFooterStyles = styled.footer`
       display: none;
     }
   }
+  a {
+    text-decoration: none;
+    &:visited {
+      color: inherit;
+    }
+  }
 `
 
 const Footer = () => {
   return (
     <SectionFooterStyles>
       <div className="text">
-        <p>Mentions légales / Données personnelles</p>
+        <a href="/mentions">Mentions légales / Données personnelles</a>
         <p>Developed and designed with ☕ by Charlotte Cachet</p>
       </div>
       <StaticImage

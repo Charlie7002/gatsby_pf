@@ -7,8 +7,6 @@ import ProjectsFilter from "../components/ProjectsFilter"
 import ProjectsList from "../components/ProjectsList"
 import Footer from "../components/Footer"
 
-console.clear()
-
 const NavSection = styled.div`
   width: 100%;
   display: flex;
