@@ -47,7 +47,7 @@ export default function Home({ location }) {
         }}
       />
       <Hero />
-      {/* <ParticlesComp /> */}
+      <ParticlesComp />
       <MainStyles>
         <SectionIntro />
         <SectionServices sectionname="services" />
