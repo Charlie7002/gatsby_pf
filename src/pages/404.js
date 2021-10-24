@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 import Seo from "../components/SEO"
@@ -143,75 +144,52 @@ const WrapperError = styled.div`
   }
 
   .bottom {
-    margin-top: 10px;
+    max-height: 10rem;
+    min-height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
   }
 
-  /*text styling*/
   h1 {
     color: white;
     text-align: center;
     font-size: 9em;
-    font-weight: 700;
-    margin: 0;
-    background: linear-gradient(to right, var(--orange) 0%, var(--violet) 100%);
-    background-size: 150% 400%;
+    margin: 0 auto 2rem;
+    background: linear-gradient(to right, var(--orange) 0%, var(--violet) 60%);
+    background-size: 200% 20%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
-    animation: gradient 5s ease infinite;
   }
   h3 {
     font-size: 2em;
     text-transform: uppercase;
     text-align: center;
-    color: gray;
     margin-top: -20px;
     font-weight: 900;
   }
   p {
-    text-align: center;
-
-    color: darkgray;
     font-size: 0.6em;
-    margin-top: -20px;
     text-transform: uppercase;
-  }
-
-  .buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  /*search style*/
-
-  .search-bar {
-    border: 1px solid gray;
-    padding: 5px;
-    height: 20px;
-    margin-left: -30px;
-    width: 200px;
-    outline: none;
-    &:focus {
-      border: 1px solid light;
-    }
   }
 
   .btn {
-    background: white;
-    padding: 15px 20px;
-    margin: 5px;
-    color: darkgray;
-
-    text-transform: uppercase;
-    font-size: 0.6em;
-    letter-spacing: 1px;
-    border: 0;
+    font-family: var(--title-font);
+    border-radius: var(--borderRadius-btn);
+    background: var(--lg-violet-btn);
+    box-shadow: 10px 10px 30px 2px rgba(179, 114, 243, 0.46);
+    transition: var(--transition);
     &:hover {
-      background: gray;
-      transition: all 0.4s ease-out;
+      filter: hue-rotate(20%);
+      filter: hue-rotate(30deg);
+      transform: translateY(-2px);
+      box-shadow: 0px 10px 40px 2px rgba(179, 114, 243, 0.7);
     }
+    padding: 15px 20px;
+    border: none;
+    color: var(--white);
   }
 `
 
@@ -243,10 +221,9 @@ const ErrorPage = () => {
         </div>
         <div class="bottom">
           <p>Boo! Run away!</p>
-
-          <div class="buttons">
-            <button class="btn">Accueil</button>
-          </div>
+          <Link to="/">
+            <button className="btn">Retour sur la page d'accueil</button>
+          </Link>
         </div>
       </WrapperError>
     </>

@@ -43,6 +43,9 @@ const SectionContactStyles = styled.section`
     input:focus {
       outline: 1px solid var(--orange);
     }
+    textarea {
+      max-width: 100%;
+    }
     label {
       font-size: 1.125rem;
       margin-bottom: 0.6rem;

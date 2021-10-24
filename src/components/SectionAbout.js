@@ -23,6 +23,9 @@ const SectionAboutStyles = styled.section`
     height: 26rem;
     position: relative;
     z-index: 2;
+    @media (max-width: 650px) {
+      margin-top: 9rem;
+    }
   }
   .about-img {
     border-radius: 100%;
