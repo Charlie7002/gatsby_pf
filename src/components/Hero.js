@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
-import { AiFillGithub, AiOutlineLinkedin } from "react-icons/Ai"
+import { AiFillGithub, AiOutlineLinkedin } from "react-icons/ai"
 import girlpf from "../assets/icons/girlpf.svg"
 import "../assets/css/main.css"
 
