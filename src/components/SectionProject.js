@@ -120,6 +120,7 @@ const SectionProjectStyles = styled.section`
   }
 
   @media (max-width: 620px) {
+    margin-top: 2rem;
     .projectWrap {
       margin-top: -8rem;
     }

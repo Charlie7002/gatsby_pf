@@ -32,6 +32,10 @@ const SectionAboutStyles = styled.section`
     .about-img {
       box-shadow: 0px 20px 40px 10px rgba(254, 160, 143, 0.2);
     }
+    @media (max-width: 650px) {
+      margin-top: 13rem;
+      max-width: 150px;
+    }
   }
   .about-text {
     font-size: 1.25rem;

@@ -21,7 +21,7 @@ const SectionIntroStyles = styled.section`
 
   .set1-img {
     max-height: 26rem;
-    width: auto;
+    max-width: 26rem;
   }
   .tiretwrap {
     display: flex;
@@ -124,6 +124,7 @@ const SectionIntroStyles = styled.section`
       flex-direction: column;
       img.set1-img {
         width: 260px;
+        height: 260px;
       }
       .pointbox-tiret {
         .tiretwrap {

@@ -108,9 +108,20 @@ const SectionContactStyles = styled.section`
     padding: 0 2rem;
   }
   @media (max-width: 700px) {
+    form input {
+      width: 100%;
+    }
+    a#mailgo {
+      font-size: 1.6rem;
+    }
+    font-size: 1.5rem;
     .wrap {
       display: flex;
       flex-direction: column;
+      form {
+        align-items: center;
+      }
+
       .img-section {
         margin-top: -4rem;
         font-size: 2rem;
@@ -162,7 +173,7 @@ const ContactForm = () => {
   }
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="nom">Nom / Prénom</label>
+      <label htmlFor="name">Nom / Prénom</label>
       <input type="text" name="name" id="name" required />
       <label htmlFor="email">Email</label>
       <input id="email" type="email" name="email" required />

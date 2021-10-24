@@ -56,6 +56,12 @@ const SectionProcessStyles = styled.section`
       }
     }
   }
+
+  @media (max-width: 650px) {
+    .box {
+      justify-items: center;
+    }
+  }
 `
 
 const SectionProcessus = ({ sectionname }) => {

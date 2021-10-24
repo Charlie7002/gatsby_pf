@@ -47,8 +47,9 @@ const SectionFooterStyles = styled.footer`
   }
   a {
     text-decoration: none;
-    &:visited {
-      color: inherit;
+    &:visited,
+    &:focus {
+      color: var(--white);
     }
   }
 `

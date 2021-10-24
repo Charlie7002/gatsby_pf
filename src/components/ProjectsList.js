@@ -54,7 +54,7 @@ const ProjectsStyles = styled.section`
     }
     @media (max-width: 900px) {
       min-height: 14.5rem;
-      padding: 1rem;
+      /* padding: 1rem; */
       gap: 1rem;
     }
   }

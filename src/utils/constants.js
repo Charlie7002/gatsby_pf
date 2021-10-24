@@ -19,7 +19,7 @@ export const boxProcess = [
     icon: iconconception,
     title: "Conception",
     color: "var(--blue)",
-    text: "Après avoir cerné besoins je concoie un site Web sur mesure, tout en respectant avec précision votre marque.",
+    text: "Après avoir cerné besoins je conçois un site Web sur mesure, tout en respectant avec précision votre marque.",
   },
   {
     id: 3,
@@ -34,26 +34,5 @@ export const boxProcess = [
     title: "Phase de lancement",
     color: "var(--pink)",
     text: "Votre site Web est mise en ligne ! Je fourni également une formation sur la façon dont vous pouvez ajouter du contenu à votre site afin que vous puissiez le faire vous-même.",
-  },
-]
-
-export const services = [
-  {
-    id: 10,
-    img: imgDesign,
-    title: "Web design",
-    text: "Votre identité visuelle est crée sur mesure pour atteindre la cible désirée.",
-  },
-  {
-    id: 20,
-    img: imgDev,
-    title: "Développement",
-    text: "La création de votre site web indispensable pour améliorer la visibilité de votre activité.",
-  },
-  {
-    id: 30,
-    img: imgRef,
-    title: "Référencement",
-    text: "Optimisation du contenu votre site afin qu’il apparaisse dans les moteurs de recherche.",
   },
 ]

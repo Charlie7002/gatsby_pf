@@ -22,13 +22,13 @@ const TitleStyles = styled.div`
   }
 
   @media (max-width: 640px) {
-    gap: 1rem;
+    gap: 0.9rem;
     img {
       max-width: 2.5rem;
     }
     h2 {
       font-size: 1.9rem;
-      line-height: 1.5rem;
+      line-height: 2rem;
       text-align: center;
     }
   }

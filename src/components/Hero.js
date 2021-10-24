@@ -30,10 +30,20 @@ const Hero = () => {
           Contact
         </Button>
         <div className="links">
-          <a href="https://www.linkedin.com/in/charlotte-cachet-devweb">
+          <a
+            href="https://www.linkedin.com/in/charlotte-cachet-devweb"
+            target="_blank"
+            rel="noopener"
+            aria-label="linkedin"
+          >
             <AiOutlineLinkedin />
           </a>
-          <a href="https://github.com/Charlie7002">
+          <a
+            href="https://github.com/Charlie7002"
+            target="_blank"
+            rel="noopener"
+            aria-label="github"
+          >
             <AiFillGithub />
           </a>
         </div>
