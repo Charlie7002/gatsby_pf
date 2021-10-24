@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import img from "../assets/images/girl-sect1.svg"
 
+//force maj
+
 const SectionIntroStyles = styled.section`
   display: flex;
   flex-direction: column;
