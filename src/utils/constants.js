@@ -2,9 +2,6 @@ import icondecouverte from "../assets/icons/decouverte.svg"
 import iconconception from "../assets/icons/conception.svg"
 import iconlancement from "../assets/icons/lancement.svg"
 import iconconstruction from "../assets/icons/construction.svg"
-import imgDev from "../assets/icons/developpement.svg"
-import imgDesign from "../assets/icons/box_tools.svg"
-import imgRef from "../assets/icons/seo.svg"
 
 export const boxProcess = [
   {
