@@ -6,6 +6,9 @@ import slugify from "slugify"
 const Filter = styled.div`
   max-width: var(--max-width);
   margin: 2rem auto;
+  @media (max-width: 650px) {
+    margin: 2rem 1.5rem;
+  }
   .tag-list {
     min-height: 60px;
     display: flex;

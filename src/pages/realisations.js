@@ -3,6 +3,8 @@ import styled from "styled-components"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
+import ScrollToTop from "react-scroll-to-top"
+import Arrow from "../components/Arrow"
 import ProjectsFilter from "../components/ProjectsFilter"
 import ProjectsList from "../components/ProjectsList"
 import Footer from "../components/Footer"
@@ -12,12 +14,10 @@ const NavSection = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-
   transition: var(--transition);
   .img-wrap {
     overflow: hidden;
     margin-left: 500px;
-
     @media (max-width: 1000px) {
       right: 0;
       img {
@@ -29,7 +29,7 @@ const NavSection = styled.div`
       position: absolute;
       height: 60px;
       right: 1.7rem;
-      top: 1.7rem;
+      top: 1.2rem;
       border-radius: 50%;
     }
     @media (max-width: 650px) {
@@ -57,6 +57,9 @@ const TitleStyle = styled.div`
     -webkit-text-fill-color: transparent;
     font-weight: 800;
     animation: gradient 5s ease infinite;
+    @media (max-width: 650px) {
+      margin: 3rem 1rem;
+    }
   }
   display: flex;
   text-align: center;
@@ -96,7 +99,6 @@ export const query = graphql`
 
 const Projects = ({ data, pageContext, location }) => {
   const projets = data.projets.nodes
-
   return (
     <Layout>
       <Seo
@@ -117,6 +119,17 @@ const Projects = ({ data, pageContext, location }) => {
           />
         </div>
       </NavSection>
+      <ScrollToTop
+        smooth
+        component={<Arrow />}
+        style={{
+          borderRadius: "40px",
+          boxShadow: "0px 9px 25px  rgba(255, 158, 152, 0.8)",
+          backgroundColor: "#ffbbae",
+          transition: "all, .3s",
+          zIndex: 59,
+        }}
+      />
       <TitleStyle>
         <h4>Mes réalisations</h4>
       </TitleStyle>

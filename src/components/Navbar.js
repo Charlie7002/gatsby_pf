@@ -44,7 +44,6 @@ const Toggle = styled.div`
   cursor: pointer;
   padding: 0 10vw;
   position: relative;
-
   @media (max-width: 1000px) {
     display: flex;
     .hamburger-wrap {
@@ -65,7 +64,6 @@ const Navbox = styled.div`
   font-size: 1.1rem;
   gap: 5.6rem;
   width: 55%;
-
   a {
     color: ${props => (props.open ? "#FFFFFF" : "var(--violet)")};
   }

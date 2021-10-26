@@ -45,6 +45,9 @@ const ProjectsStyles = styled.section`
     }
     h5 {
       text-transform: uppercase;
+      @media (max-width: 850px) {
+        text-align: center;
+      }
     }
     p {
       text-align: center;
@@ -56,6 +59,7 @@ const ProjectsStyles = styled.section`
       min-height: 14.5rem;
       /* padding: 1rem; */
       gap: 1rem;
+      padding: 1rem;
     }
   }
   .btn {

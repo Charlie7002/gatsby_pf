@@ -54,41 +54,27 @@ const NavSection = styled.div`
   justify-content: flex-end;
   transition: var(--transition);
   .img-wrap {
-    width: 65%;
-    top: -3rem;
-    right: 7rem;
-    position: relative;
-    display: flex;
-    margin-bottom: 3rem;
-    @media (max-width: 1700px) {
-      right: 2rem;
-    }
-    @media (max-width: 1570px) {
-      top: -1rem;
-      right: 1rem;
-    }
-    @media (max-width: 1350px) {
-      right: -7rem;
-      width: 80%;
-    }
-    @media (max-width: 1100px) {
-      top: 0;
-    }
+    overflow: hidden;
+    margin-left: 500px;
     @media (max-width: 1000px) {
-      right: -76rem;
-      height: 113px;
+      right: 0;
+      img {
+        display: none;
+      }
+      background: var(--lg-violet-btn);
+      opacity: 0.7;
+      width: 60px;
       position: absolute;
-      width: 148%;
+      height: 60px;
+      right: 1.7rem;
+      top: 1.7rem;
+      border-radius: 50%;
     }
-    @media (max-width: 918px) {
-      right: -60rem;
-    }
-    @media (max-width: 748px) {
-      right: -60rem;
-      width: 171%;
+    @media (max-width: 650px) {
+      top: 1.9rem;
     }
     @media (max-width: 600px) {
-      display: none;
+      background: none;
     }
   }
   .bg-projetcs-nav {
@@ -103,12 +89,12 @@ const mentions = () => {
       <NavSection>
         <div className="img-wrap">
           <StaticImage
-            src="../assets/images/bgnav.png"
+            src="../assets/images/nav3.png"
             alt=""
             placeholder="tracedSVG"
-            width="1200"
+            width={650}
             layout="constrained"
-            height="150"
+            height={100}
             className="bg-projetcs-nav"
           />
         </div>
