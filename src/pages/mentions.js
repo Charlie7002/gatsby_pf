@@ -34,6 +34,18 @@ const StyleMentions = styled.div`
     padding: 0 0.5rem;
     color: var(--blue);
   }
+  @media (max-width: 680px) {
+    h2 {
+      font-size: 1.7rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    h3,
+    h2 {
+      text-align: center;
+    }
+  }
 `
 
 const NavSection = styled.div`

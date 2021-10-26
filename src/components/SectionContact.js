@@ -63,7 +63,6 @@ const SectionContactStyles = styled.section`
     margin-top: 4rem;
     box-shadow: 0 16px 40px 0 rgba(255, 84, 117, 0.46);
     transition: all 0.4s;
-
     &:hover {
       filter: hue-rotate(20%);
       filter: hue-rotate(10deg);
@@ -80,10 +79,16 @@ const SectionContactStyles = styled.section`
     p {
       text-align: center;
       font-size: 1.4rem;
+      @media (max-width: 650px) {
+        font-size: 1.1rem;
+      }
     }
     a {
       color: var(--orange);
       font-size: 1.8rem;
+      @media (max-width: 650px) {
+        font-size: 1.5rem;
+      }
     }
   }
   .form_thanks {
@@ -97,9 +102,15 @@ const SectionContactStyles = styled.section`
     align-items: center;
     flex-direction: column;
     gap: 3rem;
+    @media (max-width: 650px) {
+      gap: 1rem;
+    }
     p {
       color: var(--orange);
       font-size: 1.2rem;
+      @media (max-width: 650px) {
+        font-size: 1rem;
+      }
     }
   }
 

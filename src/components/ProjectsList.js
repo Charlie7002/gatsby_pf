@@ -78,6 +78,9 @@ const ProjectsStyles = styled.section`
       opacity: 1;
       transform: translateY(-0.1rem);
     }
+    @media (max-width: 650px) {
+      width: 19rem;
+    }
   }
 `
 

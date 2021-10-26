@@ -7,7 +7,6 @@ const SectionFooterStyles = styled.footer`
   position: absolute;
   padding-top: 4.06rem;
   margin-top: -9rem;
-
   .text {
     position: absolute;
     color: white;
@@ -46,6 +45,7 @@ const SectionFooterStyles = styled.footer`
     }
   }
   a {
+    color: var(--white);
     text-decoration: none;
     &:visited,
     &:focus {
