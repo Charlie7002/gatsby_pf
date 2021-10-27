@@ -106,6 +106,7 @@ const SectionAbout = ({ sectionname }) => {
             width={250}
             className="about-img"
             layout="constrained"
+            placeholder="tracedSVG"
           />
         </div>
       </div>

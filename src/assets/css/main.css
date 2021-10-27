@@ -163,6 +163,13 @@ section {
   text-transform: capitalize;
 }
 
+/* cookies btn */
+#btn-cookie {
+  background-color: var(--white) !important;
+  color: rgb(103, 34, 150) !important;
+  border-radius: 3px !important;
+}
+
 @media (max-width: 1010px) {
   section {
     margin: 2rem auto 8rem;

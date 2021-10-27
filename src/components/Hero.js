@@ -16,6 +16,7 @@ const Hero = () => {
         style={{ zIndex: 5 }}
         layout="fullWidth"
         formats={["auto", "webp", "avif"]}
+        placeholder="tracedSVG"
       />
       <div className="hero-text">
         <h2>Hello,</h2>

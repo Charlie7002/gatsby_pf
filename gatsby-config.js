@@ -36,5 +36,36 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: "G-012QTN6CMP", // leave empty if you want to disable the tracker
+          cookieName: "gatsby-gdpr-google-analytics", // default
+          anonymize: true, // default
+          allowAdFeatures: false, // default
+        },
+        googleTagManager: {
+          trackingId: "YOUR_GOOGLE_TAG_MANAGER_TRACKING_ID", // leave empty if you want to disable the tracker
+          cookieName: "gatsby-gdpr-google-tagmanager", // default
+          dataLayerName: "dataLayer", // default
+        },
+        facebookPixel: {
+          pixelId: "", // leave empty if you want to disable the tracker
+          cookieName: "gatsby-gdpr-facebook-pixel", // default
+        },
+        tikTokPixel: {
+          pixelId: "", // leave empty if you want to disable the tracker
+          cookieName: "gatsby-gdpr-tiktok-pixel", // default
+        },
+        hotjar: {
+          hjid: "",
+          hjsv: "YOUR_HOTJAR_SNIPPET_VERSION",
+          cookieName: "gatsby-gdpr-hotjar", // default
+        },
+        // defines the environments where the tracking should be available  - default is ["production"]
+        environments: ["production"],
+      },
+    },
   ],
 }
