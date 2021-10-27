@@ -87,12 +87,12 @@ const SectionAbout = ({ sectionname }) => {
             d’expériences utilisateur engageantes et divertissantes.
           </p>
           <p>
-            A coté de activité freelance je suis actuellement en poste chez
+            A coté de mon activité freelance je suis actuellement en poste chez
             Vooter en tant que developpeuse front-end.
           </p>
           <p>
             Je suis située à Limours en Essonne mais de nos jours travailler
-            ensemble, à distance, de manière efficace quelque soit l’éloignement
+            ensemble à distance, de manière efficace quelque soit l’éloignement
             géographique est tout à fait possible !
           </p>
         </div>

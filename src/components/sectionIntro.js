@@ -157,14 +157,14 @@ const SectionIntro = () => {
         <span> performant </span>
       </h2>
       <h5>
-        Ce mot suplémentaire fait toute la différence entre une
+        Ce mot supplémentaire fait toute la différence entre une
         <span> visite</span> et une
         <span> vente</span>
       </h5>
       <div className="sep"></div>
       <h4>
         Quand je dis site Web performant, je ne parle pas seulement d'un beau
-        site Web, bien que cela en fasse biensûr partie, voici les
+        site Web, bien que cela en fasse bien sûr partie. En voici les
         <span> points clés</span> :
       </h4>
 

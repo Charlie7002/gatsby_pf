@@ -23,7 +23,7 @@ export const boxProcess = [
     icon: iconconstruction,
     title: "Construction",
     color: "var(--orange)",
-    text: "Lorsque vous êtes satisfait de la conception, je procéde à la construction du site en m'assurant que tout est optimisé pour suivre les pratiques Web modernes.",
+    text: "Lorsque vous êtes satisfait de la conception, je procède à la construction du site en m'assurant que tout est optimisé pour suivre les pratiques Web modernes.",
   },
   {
     id: 4,

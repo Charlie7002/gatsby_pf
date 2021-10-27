@@ -81,7 +81,7 @@ const SectionServices = ({ sectionname }) => {
           <SvgAnimateSeo />
           <h6>Référencement</h6>
           <p>
-            Optimisation du contenu votre site afin qu’il apparaisse dans les
+            Optimisation du contenu de votre site afin qu’il apparaisse dans les
             moteurs de recherche.
           </p>
         </article>

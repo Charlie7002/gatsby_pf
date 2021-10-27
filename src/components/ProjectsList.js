@@ -32,6 +32,9 @@ const ProjectsStyles = styled.section`
     gap: 0.3rem;
     align-self: center;
   }
+  .techno {
+    text-transform: capitalize;
+  }
 
   .wrap-text {
     width: 100%;
@@ -54,6 +57,9 @@ const ProjectsStyles = styled.section`
     }
     @media (max-width: 970px) {
       padding: 1rem 0;
+      p {
+        padding: 1rem;
+      }
     }
     @media (max-width: 900px) {
       min-height: 14.5rem;
@@ -84,6 +90,14 @@ const ProjectsStyles = styled.section`
     }
     @media (max-width: 650px) {
       width: 19rem;
+    }
+  }
+  article {
+    img {
+      border-radius: 10px 0 0 10px;
+      @media (max-width: 900px) {
+        border-radius: 10px 10px 0 0;
+      }
     }
   }
 `
@@ -121,7 +135,7 @@ const SingleProjet = ({ title, description, id, link, img, techno }) => {
                 {tag}
               </span>
             ))
-            .reduce((prev, curr) => [prev, ", ", curr])}
+            .reduce((prev, curr) => [prev, ",", curr])}
         </div>
         <a className="btn" href={link} rel="noopener" target="_blank">
           Voir le site
