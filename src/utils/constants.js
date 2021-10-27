@@ -9,14 +9,14 @@ export const boxProcess = [
     icon: icondecouverte,
     title: "Découverte",
     color: "var(--violet)",
-    text: "Avant de pouvoir concevoir votre site internet, je dois me plonger dans votre univers afin de cerner vos objectifs et votre public.",
+    text: "Avant de pouvoir concevoir votre site internet, je me plonge dans votre univers afin de cerner vos objectifs et votre public.",
   },
   {
     id: 2,
     icon: iconconception,
     title: "Conception",
     color: "var(--blue)",
-    text: "Après avoir cerné besoins je conçois un site Web sur mesure, tout en respectant avec précision votre marque.",
+    text: "Après avoir cerné vos besoins je conçois un site Web sur mesure, tout en respectant avec précision votre marque.",
   },
   {
     id: 3,
@@ -30,6 +30,6 @@ export const boxProcess = [
     icon: iconlancement,
     title: "Phase de lancement",
     color: "var(--pink)",
-    text: "Votre site Web est mise en ligne ! Je fourni également une formation sur la façon dont vous pouvez ajouter du contenu à votre site afin que vous puissiez le faire vous-même.",
+    text: "Votre site Web est mis en ligne ! Une formation est assurée pour la prise en main rapide de votre site. Vous pouvez également m'en confier la maintenance.",
   },
 ]

@@ -91,7 +91,7 @@ const SectionAbout = ({ sectionname }) => {
             Vooter en tant que developpeuse front-end.
           </p>
           <p>
-            Je suis située à Limours en Essonne mais nos jours travailler
+            Je suis située à Limours en Essonne mais de nos jours travailler
             ensemble, à distance, de manière efficace quelque soit l’éloignement
             géographique est tout à fait possible !
           </p>
