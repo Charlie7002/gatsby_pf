@@ -14,6 +14,7 @@ const SectionIntroStyles = styled.section`
     text-align: center;
     margin-bottom: 3.8rem;
     z-index: 2;
+    letter-spacing: 0.5px;
   }
   span {
     color: var(--violet);
@@ -157,12 +158,10 @@ const SectionIntro = () => {
         <span> performant </span>
       </h2>
       <div className="sep"></div>
-
       <h4>
-        Ce mot supplémentaire fait toute la différence, en voici les
-        <span> points clés</span>:
+        Ce mot supplémentaire fait toute la différence, voici les
+        <span> points clés</span> d'un site web réussi:
       </h4>
-
       <div className="pointbox">
         <img className="set1-img" src={img} alt="home" style={{ zIndex: 5 }} />
         <div className="pointbox-tiret">
