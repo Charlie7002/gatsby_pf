@@ -86,10 +86,10 @@ const SectionAbout = ({ sectionname }) => {
             Je suis développeuse et designer web passionnée par la création
             d’expériences utilisateur engageantes et divertissantes.
           </p>
-          <p>
+          {/* <p>
             A coté de mon activité freelance je suis actuellement en poste chez
             Vooter en tant que developpeuse front-end.
-          </p>
+          </p> */}
           <p>
             Je suis située à Limours en Essonne mais de nos jours travailler
             ensemble à distance, de manière efficace quelque soit l’éloignement

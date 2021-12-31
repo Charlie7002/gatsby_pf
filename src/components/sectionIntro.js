@@ -90,7 +90,7 @@ const SectionIntroStyles = styled.section`
     background: white;
     z-index: 1;
     position: absolute;
-    height: 400px;
+    height: 350px;
     width: 100%;
     opacity: 0.8;
     top: -1rem;
@@ -156,16 +156,11 @@ const SectionIntro = () => {
         Vous avez besoin d'un site Web, mais surtout d'un site Web
         <span> performant </span>
       </h2>
-      <h5>
-        Ce mot supplémentaire fait toute la différence entre une
-        <span> visite</span> et une
-        <span> vente</span>
-      </h5>
       <div className="sep"></div>
+
       <h4>
-        Quand je dis site Web performant, je ne parle pas seulement d'un beau
-        site Web, bien que cela en fasse bien sûr partie. En voici les
-        <span> points clés</span> :
+        Ce mot supplémentaire fait toute la différence, en voici les
+        <span> points clés</span>:
       </h4>
 
       <div className="pointbox">
