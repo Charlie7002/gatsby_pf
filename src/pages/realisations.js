@@ -74,6 +74,7 @@ export const query = graphql`
   query getProjets($tec: String) {
     projets: allContentfulProject(
       filter: { techno: { techno: { eq: $tec } } }
+      sort: { fields: order }
     ) {
       nodes {
         description
